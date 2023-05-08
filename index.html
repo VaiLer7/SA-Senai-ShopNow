@@ -140,7 +140,7 @@
                                 <img src="/img/setacima.png" height="10px" id="f12hg">
                             </button>
                         </span>
-                        <span class="CadastroTorsoSpan">
+                        <span class="CadastroTorsoSpan" style="width: 85px;">
                             <div class="hiddenOverlayPadrao"></div>
                             <div class="OverlayPadrao OverlayMes fade2"">
                                 <div>
@@ -163,7 +163,7 @@
                                 <img src="/img/setacima.png" height="10px">
                             </button>
                         </span>
-                        <span class="CadastroTorsoSpan">
+                        <span class="CadastroTorsoSpan" style="width: 55px;">
                             <div class="hiddenOverlayPadrao"></div>
                             <div class="OverlayPadrao OverlayAno fade2"">
                                 <div id="BotoesAnos"></div>
@@ -173,7 +173,7 @@
                                         BotaoAno.id = "ANObtn" + (2023 - i + 1);
                                         BotaoAno.innerHTML = "<p>" + i + "</p>";
                                         BotaoAno.onclick = function() {
-                                            TrocarANO(this);
+                                            TrocarAno(this);
                                         }
                                         document.getElementById("BotoesAnos").appendChild(BotaoAno);
                                     }                             
@@ -248,7 +248,7 @@
                         }
                         function TrocarAno(botaoClicado){
                             var botoes = []
-                            for (var i = 1; i <= 123; i++) {
+                            for (var i = 1; i <= 124; i++) {
                                 botoes.push("ANObtn" + i);
                             }
                             var ANOPrincipal = document.getElementById("ANOPrincipal");
