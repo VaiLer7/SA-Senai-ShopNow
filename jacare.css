@@ -297,7 +297,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
   
-  /* Extra styles for the cancel button */
   .BotaoContinuarLogin {
     display: flex;
     align-items: center;
@@ -333,7 +332,6 @@ input[type=text], input[type=password] {
     padding: 16px;
 }
   
-  /* Center the image and position the close button */
   .LoginSuperior {
     width: 100%;
     height: 60px;
@@ -458,6 +456,13 @@ input[type=text], input[type=password] {
     font-weight: 700;
     font-size: 30px;
   }
+  #ghvgew78gt{
+    margin: 0 0 0 5px;
+    cursor: pointer;
+  }
+  #ghvgew78gt:hover{
+    text-decoration: underline;
+  }
   
   .BotaoFecharCadastro {
     height: 30px;
@@ -493,14 +498,12 @@ input[type=text], input[type=password] {
     width: 100%;
     height: 40px;
     border-radius: 10px 0 0 10px;
+    transition: 0.3s;
   }
   .hiddenOverlayPadrao:hover ~ button img{
     rotate: 180deg;
-    transition: 0.3s;
   }
-  .hiddenOverlayPadrao:not(:hover) + button img{
-    transition: 0.3s;
-  }
+  
   .hiddenOverlayPadrao:hover + .OverlayPadrao{
     display: flex;
     transition: 0.3s;
@@ -682,7 +685,221 @@ input[type=text], input[type=password] {
 
   .TudoEsqueceu{
     display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
   }
+  .Esqueceu{
+    background-color: #80cad1;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto 15% auto;
+    border: 10px solid #b5dee1;
+    border-radius: 10px;
+    width: 400px;
+  }
+  .EsqueceuSuperior{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #TextoEsqueceuSuperior{
+    margin: 0;
+    padding-left: 15px;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: 700;
+    font-size: 23px;
+  }
+  .BotaoFecharEsqueceu{
+    height: 30px;
+    margin: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  .BotaoFecharEsqueceu:hover{
+    transform: scale(1.2);
+  }
+  .EsqueceuTorso{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .TextoEsqueceuTorso{
+    font-family: 'Lucida Sans Unicode';
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .ColocarTextoEsqueceu{
+    background-color: #60969b;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 10px;
+  }
+  .ColocarTextoEsqueceu::placeholder{
+    color: black
+  }
+  .EsqueceuAvisos > p{
+    margin: 0;
+    margin-top: 8px;
+  }
+  .EsqueceuInferior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .BotaoContinuarEsqueceu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #b5dee1;
+    transition: 0.3s;
+  }
+  .BotaoContinuarEsqueceu:hover{
+    transform: scale(1.1);
+  }
+
+
   .TudoRecuperacao{
     display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .Recuperacao{
+    background-color: #80cad1;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto 15% auto;
+    border: 10px solid #b5dee1;
+    border-radius: 10px;
+    width: 400px;
+  }
+  .RecuperacaoSuperior{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #TextoRecuperacaoSuperior{
+    margin: 0;
+    padding-left: 15px;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: 700;
+    font-size: 23px;
+  }
+  .BotaoFecharRecuperacao{
+    height: 30px;
+    margin: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+  .BotaoFecharRecuperacao:hover{
+    transform: scale(1.2);
+  }
+  .RecuperacaoTorso{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .TextoRecuperacaoTorso{
+    font-family: 'Lucida Sans Unicode';
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .ColocarTextoRecuperacao{
+    background-color: #60969b;
+    border: none;
+    padding: 12px 12px;
+    border-radius: 10px;
+  }
+  .ColocarTextoRecuperacao::placeholder{
+    color: black
+  }
+  .RecuperacaoAvisos > p{
+    margin: 0;
+    margin-top: 8px;
+  }
+  .RecuperacaoInferior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .BotaoContinuarRecuperacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 50px;
+    border: none;
+    font-family: 'Lucida Sans Unicode';
+    font-weight: 700;
+    font-size: 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #b5dee1;
+    transition: 0.3s;
+  }
+  .BotaoContinuarRecuperacao:hover{
+    transform: scale(1.1);
+  }
+
+
+
+
+
+  .TextoTorsoPromocoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .TextoTorsoPromocoes > hr{
+    width: 1300px;
+    height: 2px;
+    border: none;
+    background-color: black;
+  }
+  .TextoTorsoPromocoes > h1{
+    margin: 0;
+    position: relative;
+    bottom: 30px;
+    background-color: white;
+    padding: 0 20px 0 20px;
+    font-family: Poppins,ui-sans-serif,sans-serif;
+    font-weight: bold;
+  }
+  .ItemPromocao{
+    width: 30%;
+    height: 100%;
+    background-color: aqua;
   }
