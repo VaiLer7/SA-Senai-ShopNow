@@ -8,33 +8,29 @@
     <link rel="stylesheet" href="jacare.css">
 </head>
 <body>
-    <div id="id04" class="TudoRecuperacao">
-        <form class="Recuperacao fade2">
-            <div class="RecuperacaoSuperior">
-                <p id="TextoRecuperacaoSuperior">Recuperação de Senha</p>
-                <button onclick="document.getElementById('id04').style.display='none'" class="BotaoFecharRecuperacao">
+    <div id="id04" class="TudoPopUp">
+        <form class="PopUp fade2">
+            <div class="PopUpSuperior">
+                <p style="font-size: 23px;">Recuperação de Senha</p>
+                <button onclick="document.getElementById('id04').style.display='none'">
                     <img src="/img/Xfechar.png" height="30px">
                 </button>
             </div>
-            <div class="RecuperacaoTorso">
-                <label class="TextoRecuperacaoTorso"><b>Senha:</b></label>
-                <input type="text" placeholder="Coloque sua senha:" class="ColocarTextoRecuperacao">
+            <div class="PopUpTorso">
+                <label><b>Senha:</b></label>
+                <input type="text" placeholder="Coloque sua senha:">
                 <br>
-                <label class="TextoRecuperacaoTorso"><b>Confirmar Senha:</b></label>
-                <input type="text" placeholder="Recoloque sua senha:" class="ColocarTextoRecuperacao">
+                <label><b>Confirmar Senha:</b></label>
+                <input type="text" placeholder="Recoloque sua senha:">
                 <br>
-                <div class="RecuperacaoAvisos">
-                    <p>
-                        Certifique-se que o código foi colocado corretamente
-                    </p>
-                    <p>
-                        O Código demora em torno de 1 a 3 min para ser enviado a você
-                    </p>
+                <div class="PopUpAvisos">
+                    <p>Certifique-se que o código foi colocado corretamente.</p>
+                    <p>Demora cerca de 2 min para o codigo ser enviado a você.</p>
                 </div>
             </div>
-            <div class="RecuperacaoInferior">
+            <div class="PopUpInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id04').style.display='none'" class="BotaoContinuarRecuperacao">
+                    <button type="button" onclick="document.getElementById('id04').style.display='none'">
                         <p style="margin: 0;">Continuar</p>
                         <img src="/img/enviar.png" height="40px">
                     </button>
@@ -44,32 +40,28 @@
     </div>
 
 
-    <div id="id03" class="TudoEsqueceu">
-        <form class="Esqueceu fade2">
-            <div class="EsqueceuSuperior">
-                <p id="TextoEsqueceuSuperior">Recuperação de Senha</p>
-                <button onclick="document.getElementById('id03').style.display='none'" class="BotaoFecharEsqueceu">
+    <div id="id03" class="TudoPopUp">
+        <form class="PopUp fade2">
+            <div class="PopUpSuperior">
+                <p style="font-size: 23px;">Recuperação de Senha</p>
+                <button onclick="document.getElementById('id03').style.display='none'">
                     <img src="/img/Xfechar.png" height="30px">
                 </button>
             </div>
-            <div class="EsqueceuTorso">
-                <label class="TextoEsqueceuTorso"><b>E-mail:</b></label>
-                <input type="text" placeholder="Coloque seu E-mail:" class="ColocarTextoEsqueceu">
+            <div class="PopUpTorso">
+                <label><b>E-mail:</b></label>
+                <input type="text" placeholder="Coloque seu E-mail:">
                 <br>
-                <label class="TextoEsqueceuTorso"><b>Código:</b></label>
-                <input type="text" placeholder="Insira o código recebido:" class="ColocarTextoEsqueceu">
-                <div class="EsqueceuAvisos">
-                    <p>
-                        Certifique-se que o código foi colocado corretamente.
-                    </p>
-                    <p>
-                        Demora cerca de 2 min para o codigo ser enviado a você.
-                    </p>
+                <label><b>Código:</b></label>
+                <input type="text" placeholder="Insira o código recebido:">
+                <br>
+                <div class="PopUpAvisos">
+                    <p>Verifique se o código está escrito correto no campo!</p>
                 </div>
             </div>
-            <div class="EsqueceuInferior">
+            <div class="PopUpInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id03').style.display='none', document.getElementById('id04').style.display='block'" class="BotaoContinuarEsqueceu">
+                    <button type="button" onclick="document.getElementById('id03').style.display='none', document.getElementById('id04').style.display='block'">
                         <p style="margin: 0;">Continuar</p>
                         <img src="/img/enviar.png" height="40px">
                     </button>
@@ -79,38 +71,37 @@
     </div>
 
 
-    <div id="id02" class="TudoCadastro">
-        <form class="Cadastro fade2">
-            <div class="CadastroSuperior">
-                <p id="TextoCadastroSuperior">Cadastrar-se</p>
-                <button onclick="document.getElementById('id02').style.display='none'" class="BotaoFecharCadastro">
+    <div id="id02" class="TudoPopUp">
+        <form class="PopUp fade2" id="gb72mwd2">
+            <div class="PopUpSuperior">
+                <p>Cadastrar-se</p>
+                <button onclick="document.getElementById('id02').style.display='none'">
                     <img src="/img/Xfechar.png" height="30px">
                 </button>
             </div>
-            <div class="CadastroTorso">
-                <div style="display: flex; flex-direction: column;">
-                    <label class="TextoCadastroTorso"><b>Nome:</b></label>
-                    <input type="text" placeholder="Coloque seu Nome:" class="ColocarTextoCadastro">
+            <div class="PopUpTorso" style="flex-direction: row; justify-content: space-between;">
+                <div class="CadastroRow">
+                    <label><b>Nome:</b></label>
+                    <input type="text" placeholder="Coloque seu Nome:">
                     <br>
-                    <label class="TextoCadastroTorso"><b>E-mail:</b></label>
-                    <input type="email" placeholder="Coloque seu E-mail" class="ColocarTextoCadastro" style="width: 226px;">
+                    <label><b>E-mail:</b></label>
+                    <input type="email" placeholder="Coloque seu E-mail" style="width: 226px;">
                     <br>
-                    <label class="TextoCadastroTorso"><b>Senha:</b></label>
-                    <input type="password" placeholder="Coloque sua senha" class="ColocarTextoCadastro">
+                    <label><b>Senha:</b></label>
+                    <input type="password" placeholder="Coloque sua senha">
                     <br>
-                    <label class="TextoCadastroTorso"><b>Confirmar Senha:</b></label>
-                    <input type="password" placeholder="Confirme sua Senha" class="ColocarTextoCadastro">
-                    <br>
+                    <label><b>Confirmar Senha:</b></label>
+                    <input type="password" placeholder="Confirme sua Senha">
                 </div>
-                <div style="display: flex; flex-direction: column;">
-                    <label class="TextoCadastroTorso"><b>Sobrenome:</b></label>
-                    <input type="text" placeholder="Coloque seu Sobrenome" class="ColocarTextoCadastro">
+                <div class="CadastroRow">
+                    <label><b>Sobrenome:</b></label>
+                    <input type="text" placeholder="Coloque seu Sobrenome">
                     <br>
-                    <label class="TextoCadastroTorso"><b>Data de Nascimento:</b></label>
+                    <label><b>Data de Nascimento:</b></label>
                     <div class="IdadeCadastro">
-                        <span class="CadastroTorsoSpan"> <!-- IdadeCadastroSpan -->
-                            <div class="hiddenOverlayPadrao"></div> <!-- hiddenOverlayDIA -->
-                            <div class="OverlayPadrao OverlayDia fade2"> <!-- OverlayDIA -->
+                        <span class="CadastroTorsoSpan">
+                            <div class="hiddenOverlayPadrao"></div>
+                            <div class="OverlayPadrao OverlayDia fade2">
                                 <div id="BotoesDias1"></div>
                                 <div id="BotoesDias2"></div>
                                 <script>
@@ -185,13 +176,12 @@
                         </span>
                     </div>
                     <br>
-                    <label class="TextoCadastroTorso"><b>Telefone:</b></label>
+                    <label><b>Telefone:</b></label>
                     <div class="TelefoneCadastro">
                         <span class="CadastroTorsoSpan">
                             <div class="hiddenOverlayPadrao"></div>
                             <div class="OverlayPadrao OverlayDDI fade2">
                                 <div>
-                                    <hr style="border: none;background-color: #42686b;margin: 0 0 0 3px;width: 39px;height: 2px;position: fixed;">
                                     <button id="DDIbtn1" onclick="TrocarDDI(this)"><p>+55</p></button>
                                     <button id="DDIbtn2" onclick="TrocarDDI(this)"><p>+45</p></button>
                                     <button id="DDIbtn3" onclick="TrocarDDI(this)"><p>+35</p></button>
@@ -207,7 +197,7 @@
                                 <img src="/img/setacima.png" height="10px" id="f12hg">
                             </button>
                         </span>
-                        <span id="Linha"></span>
+                        <span id="g435gr2"></span>
                         <span>
                             <input type="text" placeholder="Digite seu número"></input>
                         </span>
@@ -215,7 +205,7 @@
                     <br>
                     <div style="display: flex;">
                         <p style="cursor: default; margin: 0;">Já possui cadastro?</p>
-                        <p onclick="document.getElementById('id02').style.display='none', document.getElementById('id01').style.display='block'" id="ghvgew78gt"">Clique aqui!</p>
+                        <p onclick="document.getElementById('id02').style.display='none', document.getElementById('id01').style.display='block'" id="ghvgew78gt">Clique aqui!</p>
                     </div>
                     <script>
                         function TrocarDIA(botaoClicado){
@@ -283,9 +273,9 @@
                     </script>
                 </div>
             </div>
-            <div class="CadastroInferior">
+            <div class="PopUpInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="BotaoContinuarCadastro">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'">
                         <p style="margin: 0;">Continuar</p>
                         <img src="/img/enviar.png" height="40px">
                     </button>
@@ -294,38 +284,38 @@
         </form>
     </div>
     
-    <div id="id01" class="TudoLogin">
-        <form class="Login fade2">
-            <div class="LoginSuperior">
-                <p id="TextoLoginSuperior">LOGIN</p>
-                <div onclick="document.getElementById('id01').style.display='none'" class="BotaoFecharLogin">
+    <div id="id01" class="TudoPopUp">
+        <form class="PopUp fade2">
+            <div class="PopUpSuperior">
+                <p>LOGIN</p>
+                <button onclick="document.getElementById('id01').style.display='none'">
                     <img src="/img/Xfechar.png" height="30px">
-                </div>
+                </button>
             </div>
-            <div class="LoginTorso">
-                <label class="TextoLoginTorso"><b>E-mail:</b></label>
-                <input type="text" placeholder="Coloque seu E-mail" required class="ColocarTextoLogin">
+            <div class="PopUpTorso">
+                <label><b>E-mail:</b></label>
+                <input type="text" placeholder="Coloque seu E-mail" required">
                 <br>
-                <label class="TextoLoginTorso"><b>Senha:</b></label>
-                <input type="password" placeholder="Coloque sua senha" required class="ColocarTextoLogin">
+                <label><b>Senha:</b></label>
+                <input type="password" placeholder="Coloque sua senha" required>
                 <br>
-                <div style="display: flex; justify-content: space-between;">
-                    <span class="TextoLoginTorso">
-                        <a href="#" style="color: black;" onclick="document.getElementById('id01').style.display='none', document.getElementById('id02').style.display='block'">Não possui cadastro?</a>
+                <div id="efg6123a" style="display: flex; justify-content: space-between;">
+                    <span>
+                        <a href="#" style="color: black;" onclick="document.getElementById('id01').style.display='none', document.getElementById('id02').style.display='block'"><p>Não possui cadastro?</p></a>
                     </span>
                     <div style="display: flex;">
                         <input type="checkbox" checked="checked">
-                        <p class="TextoLoginTorso">Lembrar Senha</p>
+                        <p>Lembrar Senha</p>
                     </div>
                 </div>
                 <br>
-                <span class="TextoLoginTorso">
-                    <a href="#" style="color: black;" onclick="document.getElementById('id01').style.display='none', document.getElementById('id03').style.display='block'">Esqueceu a senha ou E-mail?</a>
+                <span>
+                    <a id="w78gh98" onclick="document.getElementById('id01').style.display='none', document.getElementById('id03').style.display='block'">Esqueceu a senha ou E-mail?</a>
                 </span>
             </div>
-                <div class="LoginInferior">
+                <div class="PopUpInferior">
                     <div>
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="BotaoContinuarLogin">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'">
                             <p style="margin: 0;">Continuar</p>
                             <img src="/img/enviar.png" height="40px">
                         </button>
@@ -450,9 +440,9 @@
             </div>
         </div>
         <div class="CabecalhoTemas">
-            <div class="PopUp">
-                <span class="SpanPopUp" onclick="AbrirMenuLateral()">
-                    <img class="APopUp" src="/img/trestraços.png" height="20px">
+            <div class="MenuLateral">
+                <span class="SpanMenuLateral" onclick="AbrirMenuLateral()">
+                    <img class="AMenuLateral" src="/img/trestraços.png" height="20px">
                 </span>
                 <script>
                     function AbrirMenuLateral() {
