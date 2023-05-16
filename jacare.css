@@ -161,7 +161,7 @@ input:focus {
   padding: 0 5px 0 5px;
   border-radius: 5px;
   font-weight: bold;
-  background-color: #95c0c4;
+  background-color: #80cad1;
   text-decoration: none;
   -webkit-text-fill-color: black;
   margin-right: 20px;
@@ -781,7 +781,8 @@ input[type=password] {
 .Itens {
   width: 1200px;
   height: 440px;
-  background-color: transparent;
+  border-radius: 15px;
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
   padding: 20px 0 20px 0;
@@ -977,8 +978,8 @@ input[type=password] {
 
 .Itens2 {
   width: 1200px;
-  height: 500px;
-  background-color: antiquewhite;
+  height: 450px;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -987,30 +988,51 @@ input[type=password] {
 
 .BotaoSlider {
   position: absolute;
-  top: 20px;
-  bottom: 20px;
+  top: 0;
+  bottom: 4px;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   width: 100px;
   cursor: pointer;
-  font-size: 50px;
-  z-index: 500;
+  z-index: 1;
 }
 
-#voltarBtn {
-  left: 20px;
+.BotaoSlider:nth-child(1) {
+  left: 0;
+  border-top-left-radius: 15px;
 }
 
-#avancarBtn {
-  right: 20px;
+.BotaoSlider:nth-child(2) {
+  right: 0;
+  border-top-right-radius: 15px;
 }
 
 .ItemWrapper2 {
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-color: lightgray;
   position: relative;
   overflow-x: auto;
+}
+
+.ItemWrapper2::-webkit-scrollbar, .Item2Nome::-webkit-scrollbar {
+  max-height: 5px;
+  height: 5px;
+  max-width: 5px;
+  width: 5px;
+}
+
+.ItemWrapper2::-webkit-scrollbar-track, .Item2Nome::-webkit-scrollbar-track {
+  background: #eeeeee;
+}
+
+.ItemWrapper2::-webkit-scrollbar-thumb, .Item2Nome::-webkit-scrollbar-thumb {
+  background: rgb(148, 148, 148);
+}
+
+.ItemWrapper2::-webkit-scrollbar-thumb:hover, .Item2Nome::-webkit-scrollbar-thumb:hover {
+  background: grey;
 }
 
 .ItemWrapper2>div {
@@ -1027,7 +1049,7 @@ input[type=password] {
 .ItemOccupier {
   height: 90%;
   width: 62px;
-  background-color: cadetblue;
+  background-color: transparent;
   margin: 20px;
 }
 
@@ -1035,16 +1057,25 @@ input[type=password] {
   border-radius: 15px;
   height: 90%;
   width: 260px;
-  background-color: blueviolet;
+  background-color: white;
+  border: 1px solid gray;
   margin: 20px;
+  transition: 0.3s;
+  cursor: default;
+}
+.Item2:hover {
+  box-shadow: 0 0 10px grey;
 }
 
 .Item2Cima {
   height: 50%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Item2Cima>img {
+  max-height: 80%;
   max-width: 80%;
   margin: 5px;
 }
@@ -1057,15 +1088,31 @@ input[type=password] {
   justify-content: space-evenly;
 }
 
-.Item2Cima>div>p:nth-child(1) {
+.Item2Cima>div>:nth-child(1) {
   margin: 0 0 5px 0;
 }
 
-.Item2Cima>div>img {
-  width: 60%;
+.Estrelas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Estrelas>svg {
+  width: 30px;
+  fill: goldenrod;
+}
+.EstrelasCover {
+  background: white;
+  width: 100%;
+  overflow: hidden;
+  mix-blend-mode: color;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.Item2Cima>div>p:nth-child(2) {
+.Item2Cima>div>p:nth-child(3) {
   margin: 5px 0 0 0;
 }
 
@@ -1093,13 +1140,75 @@ input[type=password] {
 .Item2Preco {
   width: 90%;
   height: 25%;
-  background-color: rgb(161, 161, 255);
+  background-color: transparent
+}
+
+.Item2Preco>div>p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.Item2PrecoDesconto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Item2PrecoDesconto>strike {
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+  color: gray;
+}
+
+.Item2PrecoDesconto>p {
+  margin: 0;
+  background-color: #ff4f4f;
+  padding: 5px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .Item2Tags {
   height: 10%;
   width: 90%;
-  background-color: blue;
+  background-color: transparent;
   display: flex;
   justify-content: right;
+}
+
+.Item2Tags>p {
+  margin: 0 5px 0 0;
+  padding: 2px 6px 2px 6px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.Item2Tags>p:nth-child(1) {
+  background-color: #4AA3E4;
+  color: #EF9E14;
+}
+
+.Item2Tags>p:nth-child(2) {
+  background-color: #EF9E14;
+  color: #4AA3E4;
+}
+
+.Item2Comprar {
+  width: 90%;
+  height: 20%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Item2Comprar>button {
+  width: 75%;
+}
+.Item2Comprar>button>p {
+  margin: 0; font-weight: bold;
+}.Item2Comprar>button>img {
+  height: 90%;
 }
