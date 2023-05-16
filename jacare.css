@@ -210,7 +210,7 @@ input:focus {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background-color: #b5dee1;
   overflow-x: hidden;
 }
@@ -1015,22 +1015,22 @@ input[type=password] {
   overflow-x: auto;
 }
 
-.ItemWrapper2::-webkit-scrollbar, .Item2Nome::-webkit-scrollbar {
+.ItemWrapper2::-webkit-scrollbar, .Item2Nome::-webkit-scrollbar, .Item3Nome::-webkit-scrollbar {
   max-height: 5px;
   height: 5px;
   max-width: 5px;
   width: 5px;
 }
 
-.ItemWrapper2::-webkit-scrollbar-track, .Item2Nome::-webkit-scrollbar-track {
+.ItemWrapper2::-webkit-scrollbar-track, .Item2Nome::-webkit-scrollbar-track, .Item3Nome::-webkit-scrollbar-track {
   background: #eeeeee;
 }
 
-.ItemWrapper2::-webkit-scrollbar-thumb, .Item2Nome::-webkit-scrollbar-thumb {
+.ItemWrapper2::-webkit-scrollbar-thumb, .Item2Nome::-webkit-scrollbar-thumb, .Item3Nome::-webkit-scrollbar-thumb {
   background: rgb(148, 148, 148);
 }
 
-.ItemWrapper2::-webkit-scrollbar-thumb:hover, .Item2Nome::-webkit-scrollbar-thumb:hover {
+.ItemWrapper2::-webkit-scrollbar-thumb:hover, .Item2Nome::-webkit-scrollbar-thumb:hover, .Item3Nome::-webkit-scrollbar-thumb:hover {
   background: grey;
 }
 
@@ -1218,7 +1218,8 @@ input[type=password] {
 .Itens3{
   width: 1200px;
   height: 700px;
-  background-color: blue;
+  background-color: lightgray;
+  border-radius: 15px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -1227,19 +1228,24 @@ input[type=password] {
 .Item3{
   width: 30%;
   height: 90%;
-  background-color: blueviolet;
+  border-radius: 15px;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  cursor: default;
+}
+.Item3:hover {
+  box-shadow: 0 0 10px grey;
 }
 .Item3Cima{
   height: 45%;
   width: 100%;
+  border-radius: 15px 15px 0 0;
   display: flex;
   justify-content: space-between;
-  background-color: aquamarine;
+  background-color: white;
 }
 .Item3Cima>img{
   max-width: 100%;
@@ -1255,25 +1261,27 @@ input[type=password] {
 }
 .Item3Cima>div>:nth-child(1) {
   margin: 0 0 5px 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 .Item3Cima>div>:nth-child(3) {
   margin: 5px 0 0 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 .Estrelas2>svg{
-  width: 40px;
+  width: 45px;
 }
 .Item3Baixo{
   height: 55%;
   width: 100%;
-  background-color: red;
+  border-radius: 0 0 15px 15px;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 .Item3Nome {
+  background-color: transparent;
   overflow-y: auto;
   width: 90%;
   height: 25%;
@@ -1283,48 +1291,18 @@ input[type=password] {
 
 .Item3Nome>p {
   margin: 0;
-  font-size: 20px;
+  font-size: 25px;
 }
 .Item3Preco {
+  background-color: transparent;
   width: 90%;
   height: 25%;
-  background-color: transparent
 }
 
 .Item3Preco>div>p {
   margin: 0;
   font-weight: bold;
-  font-size: 20px;
-}
-.Item3PrecoDesconto{
-  
-}
-.Item3PrecoDescontoTotal{
-  
-}
-.Item3Tags {
-  height: 9%;
-  width: 90%;
-  background-color: transparent;
-  display: flex;
-  justify-content: right;
-}
-
-.Item3Tags>p {
-  margin: 0 5px 0 0;
-  padding: 2px 6px 2px 6px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.Item3Tags>p:nth-child(1) {
-  background-color: #4AA3E4;
-  color: #EF9E14;
-}
-
-.Item3Tags>p:nth-child(2) {
-  background-color: #EF9E14;
-  color: #4AA3E4;
+  font-size: 25px;
 }
 .Item3PrecoDesconto {
   display: flex;
@@ -1347,6 +1325,30 @@ input[type=password] {
   font-weight: bold;
   font-size: 20px;
 }
+
+.Item3Tags {
+  width: 90%;
+  background-color: transparent;
+  display: flex;
+  justify-content: right;
+}
+
+.Item3Tags>p {
+  margin: 0 5px 0 0;
+  padding: 2px 6px 2px 6px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Item3Tags>p:nth-child(1) {
+  background-color: #4AA3E4;
+  color: #EF9E14;
+}
+
+.Item3Tags>p:nth-child(2) {
+  background-color: #EF9E14;
+  color: #4AA3E4;
+}
 .Item3Comprar {
   width: 90%;
   height: 20%;
@@ -1359,7 +1361,7 @@ input[type=password] {
   width: 75%;
 }
 .Item3Comprar>button>p {
-  margin: 0; font-weight: bold;
+  font-size: 30px;
 }.Item3Comprar>button>img {
   height: 90%;
 }
