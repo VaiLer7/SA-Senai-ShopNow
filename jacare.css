@@ -806,7 +806,7 @@ input[type=password] {
   height: 700px;
   justify-content: space-evenly;
 }
-.ItemNome::-webkit-scrollbar, .ItemWrapper2::-webkit-scrollbar, .ItemNome2::-webkit-scrollbar, .ItemNome3::-webkit-scrollbar {
+.ItemNome::-webkit-scrollbar, .ItemWrapper2::-webkit-scrollbar, .ItemNome2::-webkit-scrollbar, .ItemNome3::-webkit-scrollbar, .Itens1::-webkit-scrollbar {
   max-height: 5px;
   height: 5px;
   max-width: 5px;
@@ -815,10 +815,10 @@ input[type=password] {
 .ItemNome::-webkit-scrollbar-track, .ItemWrapper2::-webkit-scrollbar-track, .ItemNome2::-webkit-scrollbar-track, .ItemNome3::-webkit-scrollbar-track {
   background: #eeeeee;
 }
-.ItemNome::-webkit-scrollbar-thumb, .ItemWrapper2::-webkit-scrollbar-thumb, .ItemNome2::-webkit-scrollbar-thumb, .ItemNome3::-webkit-scrollbar-thumb {
+.ItemNome::-webkit-scrollbar-thumb, .ItemWrapper2::-webkit-scrollbar-thumb, .ItemNome2::-webkit-scrollbar-thumb, .ItemNome3::-webkit-scrollbar-thumb, .Itens1::-webkit-scrollbar-thumb {
   background: rgb(148, 148, 148);
 }
-.ItemNome::-webkit-scrollbar-thumb:hover, .ItemWrapper2::-webkit-scrollbar-thumb:hover, .ItemNome2::-webkit-scrollbar-thumb:hover, .ItemNome3::-webkit-scrollbar-thumb:hover {
+.ItemNome::-webkit-scrollbar-thumb:hover, .ItemWrapper2::-webkit-scrollbar-thumb:hover, .ItemNome2::-webkit-scrollbar-thumb:hover, .ItemNome3::-webkit-scrollbar-thumb:hover, .Itens1::-webkit-scrollbar-thumb:hover {
   background: grey;
 }
 .BotaoSlider {
@@ -877,6 +877,7 @@ input[type=password] {
   height: 100%;
   width: 30%;
   display: flex;
+  margin: 0;
 }
 .Item1>div{
   width: 50%;
