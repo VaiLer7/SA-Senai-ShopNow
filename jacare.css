@@ -1064,6 +1064,7 @@ input[type=password] {
 }
 .SalvoItem>div {
   margin-right: 5px;
+  text-align: center;
 }
 .ItemPreco{
   width: 90%;

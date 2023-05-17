@@ -1480,9 +1480,9 @@
                     //Calculo de preço&desconto
                     
                     // Obter todos os elementos com a classe "Item2Baixo" e iterar sobre cada elemento
-                    document.querySelectorAll('.Item2Baixo').forEach((itemBaixoElement) => {
-                        const TextoValorTotal = itemBaixoElement.querySelector('.Item2PrecoDesconto strike');
-                        const TextoDesconto= itemBaixoElement.querySelector('.Item2PrecoDesconto p');
+                    document.querySelectorAll('.ItemBaixo2').forEach((itemBaixo2Element) => {
+                        const TextoValorTotal = itemBaixo2Element.querySelector('.ItemPrecoDesconto strike');
+                        const TextoDesconto= itemBaixo2Element.querySelector('.ItemPrecoDesconto p');
 
                         const ValorTotal = parseFloat(TextoValorTotal.textContent.replace(/[^0-9,-]+/g,"").replace(",", "."));
                         const Desconto = parseFloat(TextoDesconto.textContent.replace(/[^0-9,-]+/g,""));
@@ -1490,7 +1490,7 @@
                         const PrecoFinal = ValorTotal - (ValorTotal * (Desconto / 100));
                         const PrecoFinalFormatado = `R$ ${PrecoFinal.toFixed(2)}`;
 
-                        itemBaixoElement.querySelector('.Item2PrecoDescontoTotal').textContent += ' ' + PrecoFinalFormatado;
+                        itemBaixo2Element.querySelector('.ItemPrecoDescontoTotal').textContent += ' ' + PrecoFinalFormatado;
                     });
 
 
@@ -1499,12 +1499,12 @@
                     //Calculo de Avaliação de estrelas
 
                     // Seleciona todos os elementos com a classe ".Item2Cima" e itera sobre cada um deles
-                    document.querySelectorAll('.Item2Cima').forEach((item2CimaElement) => {
-                        const [valor] = item2CimaElement.querySelector('div>p:nth-child(3)').textContent.split('/');
+                    document.querySelectorAll('.ItemCima2').forEach((itemCima2Element) => {
+                        const [valor] = itemCima2Element.querySelector('div>p:nth-child(3)').textContent.split('/');
 
                         const porcentagem = 100 - ((valor / 10) * 100);
 
-                        item2CimaElement.querySelector('.EstrelasCover').style.height = `${porcentagem}%`;
+                        itemCima2Element.querySelector('.EstrelasCover').style.height = `${porcentagem}%`;
                     });
                 </script>
             </div>
