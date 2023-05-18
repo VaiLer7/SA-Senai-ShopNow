@@ -338,6 +338,12 @@ input:focus {
   opacity: 0.5;
   top: 50%;
 }
+.prev > img{
+  rotate: 270deg;
+}
+.next > img{
+  rotate: 90deg;
+}
 
 /* texto do numero do slide passando (1/3, 2/3, 3/3) */
 .numbertext {
@@ -988,11 +994,11 @@ input[type=password] {
   flex-direction: column;
   justify-content: center;
 }
-.Estrelas>svg {
+.Estrelas>img {
   width: 30px;
-  fill: goldenrod;
+  filter: invert(77%) sepia(36%) saturate(1970%) hue-rotate(352deg) brightness(94%) contrast(81%); /* filtrando cor da imagem para que fique com a mesma cor da do "goldenrod"(#daa520) */
 }
-.Estrelas3>svg{
+.Estrelas3>img{
   width: 35px;
 }
 .EstrelasCover {
@@ -1002,7 +1008,6 @@ input[type=password] {
   mix-blend-mode: color;
   position: absolute;
   top: 0;
-  right: 0;
 }
 .ItemDireita {
   display: flex;
