@@ -780,18 +780,18 @@ input[type=password] {
   display: flex;
   align-items: center;
   position: relative;
+  --mask: linear-gradient(to bottom,black,black);
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 .Itens1{
   height: 440px;
   flex-direction: column;
   padding: 20px 0 20px 0;
   overflow: auto;
-  align-items: normal;
 
   --mask: linear-gradient(to bottom,
       rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 0) 100% 50% / 100% 100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
 }
 .Itens1>div{
   display: flex;
@@ -803,7 +803,7 @@ input[type=password] {
   justify-content: center;
 }
 .Itens3{
-  height: 700px;
+  height: 550px;
   justify-content: space-evenly;
 }
 .ItemNome::-webkit-scrollbar, .ItemWrapper2::-webkit-scrollbar, .ItemNome2::-webkit-scrollbar, .ItemNome3::-webkit-scrollbar, .Itens1::-webkit-scrollbar {
@@ -824,7 +824,7 @@ input[type=password] {
 .BotaoSlider {
   position: absolute;
   top: 0;
-  bottom: 4px;
+  bottom: 5px;
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   width: 100px;
@@ -842,7 +842,6 @@ input[type=password] {
 .ItemWrapper2 {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
   background-color: lightgray;
   position: relative;
   overflow-x: auto;
@@ -916,7 +915,7 @@ input[type=password] {
 .BotaoItemComprar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: #f39200;
@@ -929,9 +928,18 @@ input[type=password] {
   margin: 0;
   font-size: 17px;
   font-weight: bold;
+  padding: 0 10px 0 10px;
 }
 .BotaoItemComprar:hover {
-  transform: scale(1.1);
+  scale: 1.2;
+}
+.BotaoItemComprar:hover > img {
+  height: 0;
+  padding: 0;
+  transition: all 0.3s;
+}.BotaoItemComprar:not(:hover) > img {
+  height: 80%;
+  transition: all 0.3s;
 }
 .ItemCima {
   height: 50%;
@@ -943,6 +951,7 @@ input[type=password] {
   height: 45%;
   width: 100%;
   border-radius: 15px 15px 0 0;
+  justify-content: space-around;
 }
 .ItemCima>img {
   margin: 5px;
@@ -964,9 +973,6 @@ input[type=password] {
 .ItemCima2{
   justify-content: space-evenly;
 }
-.ItemCima3{
-  justify-content: space-between;
-}
 .ItemCima>div>p:nth-child(1) {
   margin: 0 0 5px 0;
 }
@@ -974,7 +980,7 @@ input[type=password] {
   margin: 5px 0 0 0;
 }
 .ItemCima3>div>:nth-child(1), .ItemCima3>div>p:nth-child(3) {
-  font-size: 22px;
+  font-size: 18px;
 }
 .Estrelas {
   position: relative;
@@ -987,7 +993,7 @@ input[type=password] {
   fill: goldenrod;
 }
 .Estrelas3>svg{
-  width: 45px;
+  width: 35px;
 }
 .EstrelasCover {
   background: white;
@@ -1147,15 +1153,23 @@ input[type=password] {
   align-items: center;
 }
 .ItemComprar>button {
-  width: 75%;
+  width: 60%;
 }
 .ItemComprar2>button>p {
   margin: 0;
   font-weight: bold;
 }
+.ItemComprar3>button {
+  width: 75%;
+  border-radius: 35px;
+}
 .ItemComprar3>button>p {
   font-size: 30px;
 }
+.ItemComprar3>button>img {
+  padding-right: 10px;
+}
 .ItemComprar2>button>img {
   height: 90%;
+  padding-right: 10px;
 }

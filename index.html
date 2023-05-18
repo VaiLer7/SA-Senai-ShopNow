@@ -952,7 +952,7 @@
                         <hr>
                         <div class="ItemDireita">
                             <div class="ItemNome ItemNome1">
-                                <h2>Smartphone Xiaomi 12 256GB</h2>
+                                <h2>Invasão do Mundo da Superfície (Vol. 1 Uma aventura não oficial de Minecraft)</h2>
                             </div>
                             <div class="DescricaoItem">
                                 <div class="DescontoItem">
@@ -975,28 +975,19 @@
                     </div>
                 </div>
                 <script>
-                    // seleciona todos os elementos com classe "Item"
+                    // seleciona todos os elementos com classe "Item1"
                     const itens = document.querySelectorAll(".Item");
 
-                    // itera sobre cada elemento com classe "Item"
+                    // itera sobre cada elemento com classe "Item1"
                     itens.forEach(item => {
-                        // seleciona o elemento que contém a porcentagem de desconto
                         const descontoPorcentagem = item.querySelector(".DescontoItem > div > p").textContent.trim();
-                        // extrai o valor da porcentagem de desconto
                         const porcentagem = parseFloat(descontoPorcentagem.split(" ")[0]);
-                        // seleciona o elemento que contém o valor total com desconto
                         const valorTotal = parseFloat(item.querySelector(".SalvoItem > span > strike").textContent.trim().replace("R$ ", "").   replace(".", "").replace(",", "."));
-                        // calcula o valor do desconto em reais
                         const desconto = (porcentagem / 100) * valorTotal;
-                        // seleciona o segundo elemento h5 dentro de .SalvoItem > div
                         const valorDescontoElemento = item.querySelector(".SalvoItem > div > h5:nth-of-type(2)");
-                        // insere o valor do desconto no segundo elemento h5 dentro de .SalvoItem > div
                         valorDescontoElemento.textContent = `R$ ${desconto.toFixed(2)}`;
-                        // seleciona o elemento p dentro de .SalvoItem > span
                         const valorDescontoTotalElemento = item.querySelector(".SalvoItem > span > p");
-                        // calcula o valor do total com desconto
                         const valorDescontoTotal = valorTotal - desconto;
-                        // insere o valor do total com desconto no elemento p dentro de .SalvoItem > span
                         valorDescontoTotalElemento.textContent = `R$ ${valorDescontoTotal.toFixed(2)}`;
                     });
                 </script>
@@ -1453,60 +1444,6 @@
                         <div class="ItemOccupier"></div>
                     </div>
                 </div>
-                <script>
-
-                    //Função de click do botão para arrastar o scroll
-
-                    const itemWrapper = document.querySelector('.ItemWrapper2');
-                    const voltarBtn = document.querySelector('.Itens2>button:nth-child(1)');
-                    const avancarBtn = document.querySelector('.Itens2>button:nth-child(2)');
-                
-                    voltarBtn.addEventListener('click', () => {
-                        itemWrapper.scrollBy({
-                            left: -300,
-                            behavior: 'smooth'
-                        });
-                    });
-                    avancarBtn.addEventListener('click', () => {
-                        itemWrapper.scrollBy({
-                            left: +300,
-                            behavior: 'smooth'
-                        });
-                    });
-
-
-
-
-                    //Calculo de preço&desconto
-                    
-                    // Obter todos os elementos com a classe "Item2Baixo" e iterar sobre cada elemento
-                    document.querySelectorAll('.ItemBaixo2').forEach((itemBaixo2Element) => {
-                        const TextoValorTotal = itemBaixo2Element.querySelector('.ItemPrecoDesconto strike');
-                        const TextoDesconto= itemBaixo2Element.querySelector('.ItemPrecoDesconto p');
-
-                        const ValorTotal = parseFloat(TextoValorTotal.textContent.replace(/[^0-9,-]+/g,"").replace(",", "."));
-                        const Desconto = parseFloat(TextoDesconto.textContent.replace(/[^0-9,-]+/g,""));
-
-                        const PrecoFinal = ValorTotal - (ValorTotal * (Desconto / 100));
-                        const PrecoFinalFormatado = `R$ ${PrecoFinal.toFixed(2)}`;
-
-                        itemBaixo2Element.querySelector('.ItemPrecoDescontoTotal').textContent += ' ' + PrecoFinalFormatado;
-                    });
-
-
-
-
-                    //Calculo de Avaliação de estrelas
-
-                    // Seleciona todos os elementos com a classe ".Item2Cima" e itera sobre cada um deles
-                    document.querySelectorAll('.ItemCima2').forEach((itemCima2Element) => {
-                        const [valor] = itemCima2Element.querySelector('div>p:nth-child(3)').textContent.split('/');
-
-                        const porcentagem = 100 - ((valor / 10) * 100);
-
-                        itemCima2Element.querySelector('.EstrelasCover').style.height = `${porcentagem}%`;
-                    });
-                </script>
             </div>
         </div>
         <br><br>
@@ -1539,7 +1476,7 @@
                                 </svg>
                                 <div class="EstrelasCover" style="height: 0%;"></div>
                             </div>
-                            <p>7.9/10</p>
+                            <p>9/10</p>
                         </div>
                     </div>
                     <div class="ItemBaixo ItemBaixo3">
@@ -1547,14 +1484,14 @@
                             <p>Banco Decorativo de Madeira Onça Pintada Alisa Minha Tabua</p>
                         </div>
                         <div class="ItemPreco ItemPreco3">
-                            <div style="display: none;">
+                            <div style="display: block;">
                                 <div class="ItemPrecoDesconto ItemPrecoDesconto3">
                                     <strike>De: R$ 188,22</strike>
-                                    <p>0% OFF</p>
+                                    <p>10% OFF</p>
                                 </div>
-                                <p class="Item3PrecoDescontoTotal">Por: </p>
+                                <p class="ItemPrecoDescontoTotal">Por: </p>
                             </div>
-                            <div style="display: block">
+                            <div style="display: none">
                                 <p>Por: R$ 189,90</p>
                             </div>
                         </div>
@@ -1565,7 +1502,7 @@
                         <a href="/produto" class="ItemComprar ItemComprar3">
                             <button class="BotaoItemComprar">
                                 <p>COMPRAR</p>
-                                <img src="/img/enviar.png" width="10%">
+                                <img src="/img/enviar.png">
                             </button>
                         </a>
                     </div>
@@ -1574,6 +1511,78 @@
                 <div class="Item Item3"></div>
             </div>
         </div>
+        <script>
+
+            //Função de click do botão para arrastar o scroll
+
+            const itemWrapper = document.querySelector('.ItemWrapper2');
+            const voltarBtn = document.querySelector('.Itens2>button:nth-child(1)');
+            const avancarBtn = document.querySelector('.Itens2>button:nth-child(2)');
+        
+            voltarBtn.addEventListener('click', () => {
+                itemWrapper.scrollBy({
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            });
+            avancarBtn.addEventListener('click', () => {
+                itemWrapper.scrollBy({
+                    left: +300,
+                    behavior: 'smooth'
+                });
+            });
+
+
+
+
+            //Calculo de preço&desconto das classes Item2 e Item3
+            
+            // Obter todos os elementos com a classe "ItemBaixo" e iterar sobre cada elemento
+            document.querySelectorAll('.ItemBaixo').forEach((itemBaixoElement) => {
+                const TextoValorTotal = itemBaixoElement.querySelector('.ItemPrecoDesconto strike');
+                const TextoDesconto= itemBaixoElement.querySelector('.ItemPrecoDesconto p');
+
+                const ValorTotal = parseFloat(TextoValorTotal.textContent.replace(/[^0-9,-]+/g,"").replace(",", "."));
+                const Desconto = parseFloat(TextoDesconto.textContent.replace(/[^0-9,-]+/g,""));
+
+                const PrecoFinal = ValorTotal - (ValorTotal * (Desconto / 100));
+                const PrecoFinalFormatado = `R$ ${PrecoFinal.toFixed(2)}`;
+
+                itemBaixoElement.querySelector('.ItemPrecoDescontoTotal').textContent += ' ' + PrecoFinalFormatado;
+            });
+
+
+
+
+            //Calculo de Avaliação de estrelas
+
+            // Seleciona todos os elementos com a classe ".Item2Cima" e itera sobre cada um deles
+            document.querySelectorAll('.ItemCima').forEach((itemCimaElement) => {
+                const [valor] = itemCimaElement.querySelector('div>p:nth-child(3)').textContent.split('/');
+
+                const porcentagem = 100 - ((valor / 10) * 100);
+
+                itemCimaElement.querySelector('.EstrelasCover').style.height = `${porcentagem}%`;
+            });
+
+
+
+
+            //Calculo de preço&desconto da classe Item1
+
+            // itera sobre cada elemento com classe "Item1"
+            document.querySelectorAll(".Item1").forEach(item => {
+                const descontoPorcentagem = item.querySelector(".DescontoItem > div > p").textContent.trim();
+                const porcentagem = parseFloat(descontoPorcentagem.split(" ")[0]);
+                const valorTotal = parseFloat(item.querySelector(".SalvoItem > span > strike").textContent.trim().replace("R$ ", "").   replace(".", "").replace(",", "."));
+                const desconto = (porcentagem / 100) * valorTotal;
+                const valorDescontoElemento = item.querySelector(".SalvoItem > div > h5:nth-of-type(2)");
+                valorDescontoElemento.textContent = `R$ ${desconto.toFixed(2)}`;
+                const valorDescontoTotalElemento = item.querySelector(".SalvoItem > span > p");
+                const valorDescontoTotal = valorTotal - desconto;
+                valorDescontoTotalElemento.textContent = `R$ ${valorDescontoTotal.toFixed(2)}`;
+            });
+        </script>
     </div>
 </body>
 </html>
