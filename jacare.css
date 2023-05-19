@@ -20,8 +20,24 @@ input:focus {
 }
 
 .logopart {
-  width: 100%;
+  width: 30%;
   height: 100%;
+  position: relative;
+}
+.logopart>img{
+  height: 27px;
+  position: absolute;
+  bottom: 0;
+  filter: invert(80%) sepia(78%) saturate(4368%) hue-rotate(358deg) brightness(107%) contrast(106%);
+}
+.Logo{
+  font-size: 22px;
+  text-decoration: none;
+  -webkit-text-fill-color: #000000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: absolute;
+  top: 8px;
+  left: 20px;
 }
 
 .CabecalhoPrincipal {
@@ -34,12 +50,12 @@ input:focus {
 
 .Pesquisa {
   display: flex;
-  width: 100%;
+  width: 30%;
   align-items: center
 }
 
 .Botoes {
-  width: 100%;
+  width: 30%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -329,21 +345,24 @@ input:focus {
 }
 
 /* Botoes de avançar & voltar */
-.prev,
-.next {
+.prev, .next {
   position: absolute;
-  height: 40px;
   margin-top: -30px;
   cursor: pointer;
   opacity: 0.5;
   top: 50%;
 }
-.prev > img{
-  rotate: 270deg;
+.prev>img, .next>img {
+  height: 40px;
 }
-.next > img{
+.prev{
+  rotate: -90deg;
+}
+.next{
   rotate: 90deg;
+  right: 0;
 }
+
 
 /* texto do numero do slide passando (1/3, 2/3, 3/3) */
 .numbertext {
@@ -841,9 +860,15 @@ input[type=password] {
   left: 0;
   border-top-left-radius: 15px;
 }
+.BotaoSlider:nth-child(1)>img {
+  rotate: -90deg;
+}
 .BotaoSlider:nth-child(2) {
   right: 0;
   border-top-right-radius: 15px;
+}
+.BotaoSlider:nth-child(2)>img {
+  rotate: 90deg;
 }
 .ItemWrapper2 {
   width: 100%;
