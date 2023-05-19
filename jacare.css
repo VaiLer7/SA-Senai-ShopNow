@@ -46,6 +46,8 @@ input:focus {
   background-color: #80cad1;
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  z-index: 3;
 }
 
 .Pesquisa {
@@ -141,6 +143,7 @@ input:focus {
   background-color: #b5dee1;
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
 .MenuLateral {
@@ -226,7 +229,7 @@ input:focus {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   background-color: #b5dee1;
   overflow-x: hidden;
 }
@@ -424,7 +427,7 @@ input[type=password] {
 .TudoPopUp {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   left: 0;
   top: 0;
   width: 100%;

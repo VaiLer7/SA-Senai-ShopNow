@@ -18,3 +18,5 @@ Fazer Página Politicas e Informações
 Fazer Página Carrinho
 Fazer Página De Pesquisa
 Fazer Página De Categorias de Produtos
+
+Melhorar Footer do Site (ele será mostrado em todas as páginas, então é necessário que sejá agradável, e condizente com a qualidade gráfica geral do site)
