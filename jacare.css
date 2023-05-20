@@ -1,7 +1,6 @@
 body {
   flex-wrap: wrap;
   margin: 0;
-  height: 2500px;
 }
 
 body::-webkit-scrollbar {
@@ -199,7 +198,7 @@ input:focus {
 
 .Torso {
   width: 100%;
-  height: 1200px;
+  height: 100%;
 }
 
 .Promocoes {
@@ -1257,4 +1256,133 @@ input[type=password] {
 .ItemComprar2>button>img {
   height: 90%;
   padding-right: 10px;
+}
+
+.backFooter{
+  width: calc(100%-2px);
+  height: 30px;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.backFooter:hover{
+  background-color: grey;
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: #80cad1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.direitosFooter {
+  /* height: 200px; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.direitosFooter >p{
+  margin: 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.localpaiFooter {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.localFooter {
+  width: 190px;
+  height: 90px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.telefonepaiFooter {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.telefoneFooter {
+  width: 190px;
+  height: 90px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.emailpaiFooter{
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emailFooter {
+  width: 190px;
+  height: 90px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.pagamentopaiFooter {
+  width: 190px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagamentoFooter {
+  width: 190px;
+  height: 90px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.pagamentoFooter>p {
+  margin-right: 20px;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.cartoesFooter>img {
+  width: 270px;
+}
+
+.itensFooter {
+  display: flex;
+  justify-content: space-around;
+  /* justify-content: center; */
+  align-items: center;
+
+}
+
+
+
+footer>hr {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  border: none;
 }
