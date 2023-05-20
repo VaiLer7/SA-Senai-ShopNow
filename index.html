@@ -8,6 +8,144 @@
     <link rel="stylesheet" href="jacare.css">
 </head>
 <body>
+    <div id="id06" class="CookiesOpcoes">
+        <div class="CookiesOpcoesCima">
+            <img src="/img/assets/configurações.svg">
+            <p>Opções</p>
+        </div>
+        <div class="CookiesOpcoesMeio">
+            <hr>
+            <button class="CookiesTipos" onclick="RevelarTiposCookies(1)" id="id06t1">
+                <img src="/img/assets/setacima.svg">
+                <p>Essenciais</p>
+            </button>
+            <div class="CookiesTiposOculto" id="id06to1">
+                <div>
+                    <p>Rock Consent</p>
+                    <input type="checkbox" onclick="return false;" checked>
+                </div>
+            </div>
+            <hr>
+            <button class="CookiesTipos" onclick="RevelarTiposCookies(2)" id="id06t2">
+                <img src="/img/assets/setacima.svg">
+                <p>Analíticos</p>
+            </button>
+            <div class="CookiesTiposOculto" id="id06to2">
+                <div>
+                    <p>Google Analytics</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Hubspot Analytics</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Hubspot Chat</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Rock Analytics</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <hr>
+            <button class="CookiesTipos" onclick="RevelarTiposCookies(3)" id="id06t3">
+                <img src="/img/assets/setacima.svg">
+                <p>Performance</p>
+            </button>
+            <div class="CookiesTiposOculto" id="id06to3">
+                <div>
+                    <p>HelloBar</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Google Tag Manager</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <hr>
+            <button class="CookiesTipos" onclick="RevelarTiposCookies(4)" id="id06t4">
+                <img src="/img/assets/setacima.svg">
+                <p>Propaganda</p>
+            </button>
+            <div class="CookiesTiposOculto" id="id06to4">
+                <div>
+                    <p>Google Ads</p>
+                    <input type="checkbox">
+                </div>
+                <div>
+                    <p>Facebook Pixel</p>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="CookiesBaixo CookiesBaixo2">
+            <a href="politicas-e-informacoes">Políticas de Privacidade</a>
+            <div class="CookiesBotoes">
+                <button onclick="document.getElementById('id06').style.display='none', document.getElementById('id05').style.display='block'"><p>Voltar</p></button>
+                <button onclick="document.getElementById('id06').style.display='none'"><p>Aceitar</p></button>
+            </div>
+        </div>
+        <script>
+            function RevelarTiposCookies(Tipo){
+                if(Tipo==1){
+                    var escondido = document.getElementById('id06to1');
+                    var clicke = 0;
+                    addEventListener("click", funcao)
+                    function funcao(){
+                        clicke++;
+                        if(clicke%2==1){
+                            escondido.style.display='block';
+                            console.log('Número de cliques: ' + clicke);
+                        }else{
+                            escondido.style.display='none';
+                            console.log('Número de cliques: ' + clicke);
+                        }
+                    }
+                }else if(Tipo==2){
+                    var escondido = document.getElementById('id06to2');
+                    if(escondido.style.display==="none"){
+                        escondido.style.display='block';
+                    }else{
+                        escondido.style.display='none';
+                    }
+                }else if(Tipo==3){
+                    var escondido = document.getElementById('id06to3');
+                    if(escondido.style.display==="none"){
+                        escondido.style.display='block';
+                    }else{
+                        escondido.style.display='none';
+                    }
+                }else{
+                    var escondido = document.getElementById('id06to4');
+                    if(escondido.style.display==="none"){
+                        escondido.style.display='block';
+                    }else{
+                        escondido.style.display='none';
+                    }
+                }
+            }
+        </script>
+    </div>
+    <div id="id05" class="CookiesPopUp">
+        <div class="CookiesPopUpCima">
+            <img src="/img/assets/cookies.svg">
+            <p>Este Site usa Cookies</p>
+        </div>
+        <div class="CookiesPopUpMeio">
+            <p>Nós armazenamos dados temporariamente para melhorar a sua experiência de navegação e recomendar conteúdo de seu interesse. Ao utilizar nossos serviços, você concorda com tal monitoramento.</p>
+        </div>
+        <div class="CookiesBaixo">
+            <a href="politicas-e-informacoes">Políticas de Privacidade</a>
+            <div class="CookiesBotoes">
+                <button onclick="document.getElementById('id05').style.display='none', document.getElementById('id06').style.display='flex'"><p>Opções</p></button>
+                <button onclick="document.getElementById('id05').style.display='none'"><p>Aceitar</p></button>
+            </div>
+        </div>
+    </div>
+
+
     <div id="id04" class="TudoPopUp">
         <form class="PopUp fade2">
             <div class="PopUpSuperior">
@@ -2149,54 +2287,56 @@
                 const valorDescontoTotal = valorTotal - desconto;
                 valorDescontoTotalElemento.textContent = `R$ ${valorDescontoTotal.toFixed(2)}`;
             });
+
+            function FuncaoVoltar(){
+                document.documentElement.scrollTop = 0;
+            }
         </script>
     </div>
     <footer>
-        <bootom class="backFooter">
-            <b><p>Voltar ao Inicío</p></b>
-        </bootom>
-        <div class="itensFooter">
-            <div class="localpaiFooter">
-                <div class="localFooter">
-                    <b>
-                        <p>Loja Física</p>
-                    </b>
-                    <img src="/img/assets/localizacaosimbolo.svg" height="30px" alt="">
+        <button class="VoltarFooter" onclick="FuncaoVoltar()">
+            <p>Voltar ao Inicío</p>
+        </button>
+        <div class="ItensFooter">
+            <div class="LocalWrapperFooter">
+                <div class="LocalFooter">
+                    <p>Loja Física</p>
+                    <img src="/img/assets/localizacaosimbolo.svg" height="30px">
                 </div>
                 <div>
                     <p>SC-Joinville, Jardim Paraiso</p>
                 </div>
             </div>
-            <div class="telefonepaiFooter">
-                <div class="telefoneFooter">
-                    <b><p>Telefone</p></b>
-                    <img src="/img/assets/telefonesimbolo.svg" />
+            <div class="TelefoneWrapperFooter">
+                <div class="TelefoneFooter">
+                    <p>Telefone</p>
+                    <img src="/img/assets/telefonesimbolo.svg">
                 </div>
                 <div>
                     <p>(47)4002-8922 ou 3402-2213</p>
                 </div>
             </div>
-            <div class="emailpaiFooter">
-                <div class="emailFooter">
-                    <b><p>Email e SAC</p></b>
+            <div class="EmailWrapperFooter">
+                <div class="EmailFooter">
+                    <p>Email e SAC</p>
                     <img src="/img/assets/emailsimbolo.svg" />
                 </div>
                     <div>
                         <p>cassolrodamurcha@gmail.com</p>
                     </div>
                 </div>
-            <div class="pagamentopaiFooter">
-                <div class="pagamentoFooter">
-                    <b><p>Cartões</p></b>
+            <div class="PagamentoWrapperFooter">
+                <div class="PagamentoFooter">
+                    <p>Cartões</p>
                     <img src="/img/assets/cartaosimbolo.svg"/>
                 </div>
-                <div class="cartoesFooter">  
-                    <img src="/img/bandeiras-de-cartoes-de-credito-png-e-vetor-PhotoRoom.png-PhotoRoom.png" alt="">
+                <div class="CartoesFooter">  
+                    <img src="/img/bandeiras-de-cartoes-de-credito.png">
                 </div>
             </div>
         </div>
         <hr>
-        <div class="direitosFooter">
+        <div class="DireitosFooter">
             <p>2021 Pendant © All Rights Reserved - Todos os direitos reservados. Os preços anunciados neste site ou via e-mail promocional podem ser alterados sem prévio aviso.</p>
         </div>
     </footer>
