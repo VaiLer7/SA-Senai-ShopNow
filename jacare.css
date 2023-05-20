@@ -834,6 +834,11 @@ input[type=password] {
   height: 550px;
   justify-content: space-evenly;
 }
+.Itens4{
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+}
 .ItemNome::-webkit-scrollbar, .ItemWrapper2::-webkit-scrollbar, .ItemNome2::-webkit-scrollbar, .ItemNome3::-webkit-scrollbar, .Itens1::-webkit-scrollbar {
   max-height: 5px;
   height: 5px;
@@ -935,6 +940,11 @@ input[type=password] {
   align-items: center;
   background-color:white;
 }
+.Item4{
+  width: 198px;
+  height: 300px;
+  cursor: pointer;
+}
 .Item:hover{
   box-shadow: 0 0 10px grey;
 }
@@ -981,22 +991,10 @@ input[type=password] {
   justify-content: space-between;
   align-items: center;
 }
-.ItemCima3{
-  height: 45%;
-  width: 100%;
-  border-radius: 15px 15px 0 0;
-  justify-content: space-around;
-}
 .ItemCima>img {
   margin: 5px;
-}
-.ItemCima2>img {
   max-height: 80%;
   max-width: 80%;
-}
-.ItemCima3>img {
-  max-width: 80%;
-  max-height: 80%;
 }
 .ItemCima>div {
   width: 20%;
@@ -1004,8 +1002,17 @@ input[type=password] {
   flex-direction: column;
   align-items: center;
 }
+.ItemCima3{
+  height: 45%;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  justify-content: space-around;
+}
 .ItemCima2{
   justify-content: space-evenly;
+}
+.ItemCima4{
+  justify-content: center;
 }
 .ItemCima>div>p:nth-child(1) {
   margin: 0 0 5px 0;
@@ -1058,6 +1065,13 @@ input[type=password] {
   width: 100%;
   border-radius: 0 0 15px 15px;
 }
+.ItemBaixo>div:nth-child(3){
+  display: flex;
+  flex-wrap: wrap;
+}
+.ItemBaixo{
+  height: 50%;
+}
 .ItemNome {
   overflow: auto;
   width: 90%;
@@ -1091,6 +1105,10 @@ input[type=password] {
 .ItemNome3>p {
   font-size: 25px;
 }
+.ItemNome4{
+  text-align: left;
+  height: 25%;
+}
 .DescricaoItem {
   width: 100%;
   height: 50%;
@@ -1120,10 +1138,22 @@ input[type=password] {
 .ItemPreco3>div>p {
   font-size: 25px;
 }
+.ItemPreco4{
+  position: relative;
+  height: 20%;
+}
+.ItemPreco4>div:nth-child(1)>p{
+  margin: 0;
+  position: absolute;
+  top: 15px;
+}
 .ItemPrecoDesconto, .SalvoItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.ItemPrecoDesconto4{
+  position: relative;
 }
 .SalvoItem {
   margin-top: 5px;
@@ -1133,6 +1163,16 @@ input[type=password] {
   font-weight: bold;
   font-size: 13px;
   color: gray;
+}
+.ItemPrecoDesconto4>strike{
+  position: absolute;
+  top: 0;
+  z-index: auto;
+}
+.ItemPrecoDesconto4>p{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .PrecoDesconto>p, .DescontoItem>div, .ItemPrecoDesconto>p{
@@ -1158,7 +1198,7 @@ input[type=password] {
   justify-content: right;
 }
 .ItemTags>p {
-  margin: 0 5px 0 0;
+  margin: 5px 5px 0 0;
   padding: 2px 6px 2px 6px;
   font-weight: bold;
 }
@@ -1168,6 +1208,9 @@ input[type=password] {
 .ItemTags3>p {
   font-size: 18px;
 }
+.ItemTags4>p {
+  font-size: 11px;
+}
 .ItemTags>p:nth-child(1) {
   background-color: #4AA3E4;
   color: #EF9E14;
@@ -1176,6 +1219,15 @@ input[type=password] {
 .ItemTags>p:nth-child(2) {
   background-color: #EF9E14;
   color: #4AA3E4;
+}
+.ItemTags>p:nth-child(3) {
+  background-color: black;
+  color: white;
+}
+
+.ItemTags>p:nth-child(4) {
+  background-color: lightgray;
+  color: black;
 }
 .ItemComprar {
   width: 90%;
