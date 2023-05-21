@@ -803,7 +803,7 @@ input[type=password] {
 .Itens {
   width: 1200px;
   border-radius: 15px;
-  background-color: lightgray;
+  background-color: whitesmoke;
   display: flex;
   align-items: center;
   position: relative;
@@ -880,7 +880,7 @@ input[type=password] {
 .ItemWrapper2 {
   width: 100%;
   height: 100%;
-  background-color: lightgray;
+  background-color: whitesmoke;
   position: relative;
   overflow-x: auto;
 }
@@ -1031,7 +1031,8 @@ input[type=password] {
 }
 .Estrelas>img {
   width: 30px;
-  filter: invert(77%) sepia(36%) saturate(1970%) hue-rotate(352deg) brightness(94%) contrast(81%); /* filtrando cor da imagem para que fique com a mesma cor da do "goldenrod"(#daa520) */
+  filter: invert(77%) sepia(36%) saturate(1970%) hue-rotate(352deg) brightness(94%) contrast(81%);
+  /* filtrando cor da imagem para que fique com a mesma cor da do "goldenrod"(#daa520) */
 }
 .Estrelas3>img{
   width: 35px;
@@ -1565,4 +1566,53 @@ footer>hr {
 }
 #id06to1, #id06to2, #id06to3, #id06to4{
   display: none;
+}
+
+.Propaganda{
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  bottom: 20px;
+  right: 20px;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  box-shadow: 0 0 10px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.PropagandaCima{
+  height: 10%;
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.PropagandaCima>button{
+  width: fit-content;
+  height: 40%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+}
+.PropagandaCima>button>img{
+  height: 100%;
+}
+.PropagandaMeio{
+  height: 90%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.PropagandaMeio>img{
+  max-height: 90%;
+  max-width: 90%;
+  margin: 5px;
 }

@@ -3,7 +3,7 @@ Home:
 
 Terminar botão toggle do cookies
 
-Fazer anúncios fixados (position: fixed)
+fazer imagens de propaganda (1x1)
 
 Resto:
 Fazer Página Configurações

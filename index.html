@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="jacare.css">
 </head>
 <body>
+    <div id="id07" class="Propaganda">
+        <div class="PropagandaCima">
+            <button onclick="PropagandaFechar()">
+                <img src="/img/assets/Xfechar.svg">
+            </button>
+        </div>
+        <div class="PropagandaMeio">
+            <img src="/img/imgProdutos/6e4cf819689faeeeef2c57858140d66a.png">
+        </div>
+        <script>
+            function PropagandaFechar(){
+                const propaganda = document.getElementById('id07').style;
+
+                propaganda.display = 'none';
+                m=60000;
+                setTimeout(AbrirPropaganda, 10*m);
+
+                function AbrirPropaganda(){
+                    propaganda.display = 'flex';
+                }
+            }
+        </script>
+    </div>
     <div id="id06" class="CookiesOpcoes">
         <div class="CookiesOpcoesCima">
             <img src="/img/assets/configurações.svg">
@@ -15,22 +38,22 @@
         </div>
         <div class="CookiesOpcoesMeio">
             <hr>
-            <button class="CookiesTipos" onclick="RevelarTiposCookies(1)" id="id06t1">
+            <button class="CookiesTipos">
                 <img src="/img/assets/setacima.svg">
                 <p>Essenciais</p>
             </button>
-            <div class="CookiesTiposOculto" id="id06to1">
+            <div class="CookiesTiposOculto">
                 <div>
                     <p>Rock Consent</p>
                     <input type="checkbox" onclick="return false;" checked>
                 </div>
             </div>
             <hr>
-            <button class="CookiesTipos" onclick="RevelarTiposCookies(2)" id="id06t2">
+            <button class="CookiesTipos">
                 <img src="/img/assets/setacima.svg">
                 <p>Analíticos</p>
             </button>
-            <div class="CookiesTiposOculto" id="id06to2">
+            <div class="CookiesTiposOculto">
                 <div>
                     <p>Google Analytics</p>
                     <input type="checkbox">
@@ -49,11 +72,11 @@
                 </div>
             </div>
             <hr>
-            <button class="CookiesTipos" onclick="RevelarTiposCookies(3)" id="id06t3">
+            <button class="CookiesTipos">
                 <img src="/img/assets/setacima.svg">
                 <p>Performance</p>
             </button>
-            <div class="CookiesTiposOculto" id="id06to3">
+            <div class="CookiesTiposOculto">
                 <div>
                     <p>HelloBar</p>
                     <input type="checkbox">
@@ -64,11 +87,11 @@
                 </div>
             </div>
             <hr>
-            <button class="CookiesTipos" onclick="RevelarTiposCookies(4)" id="id06t4">
+            <button class="CookiesTipos">
                 <img src="/img/assets/setacima.svg">
                 <p>Propaganda</p>
             </button>
-            <div class="CookiesTiposOculto" id="id06to4">
+            <div class="CookiesTiposOculto">
                 <div>
                     <p>Google Ads</p>
                     <input type="checkbox">
@@ -87,46 +110,6 @@
                 <button onclick="document.getElementById('id06').style.display='none'"><p>Aceitar</p></button>
             </div>
         </div>
-        <script>
-            function RevelarTiposCookies(Tipo){
-                if(Tipo==1){
-                    var escondido = document.getElementById('id06to1');
-                    var clicke = 0;
-                    addEventListener("click", funcao)
-                    function funcao(){
-                        clicke++;
-                        if(clicke%2==1){
-                            escondido.style.display='block';
-                            console.log('Número de cliques: ' + clicke);
-                        }else{
-                            escondido.style.display='none';
-                            console.log('Número de cliques: ' + clicke);
-                        }
-                    }
-                }else if(Tipo==2){
-                    var escondido = document.getElementById('id06to2');
-                    if(escondido.style.display==="none"){
-                        escondido.style.display='block';
-                    }else{
-                        escondido.style.display='none';
-                    }
-                }else if(Tipo==3){
-                    var escondido = document.getElementById('id06to3');
-                    if(escondido.style.display==="none"){
-                        escondido.style.display='block';
-                    }else{
-                        escondido.style.display='none';
-                    }
-                }else{
-                    var escondido = document.getElementById('id06to4');
-                    if(escondido.style.display==="none"){
-                        escondido.style.display='block';
-                    }else{
-                        escondido.style.display='none';
-                    }
-                }
-            }
-        </script>
     </div>
     <div id="id05" class="CookiesPopUp">
         <div class="CookiesPopUpCima">
@@ -1119,7 +1102,7 @@
                     itens.forEach(item => {
                         const descontoPorcentagem = item.querySelector(".DescontoItem > div > p").textContent.trim();
                         const porcentagem = parseFloat(descontoPorcentagem.split(" ")[0]);
-                        const valorTotal = parseFloat(item.querySelector(".SalvoItem > span > strike").textContent.trim().replace("R$ ", "").   replace(".", "").replace(",", "."));
+                        const valorTotal = parseFloat(item.querySelector(".SalvoItem > span > strike").textContent.trim().replace("R$ ", "").replace(".", "").replace(",", "."));
                         const desconto = (porcentagem / 100) * valorTotal;
                         const valorDescontoElemento = item.querySelector(".SalvoItem > div > h5:nth-of-type(2)");
                         valorDescontoElemento.textContent = `R$ ${desconto.toFixed(2)}`;
