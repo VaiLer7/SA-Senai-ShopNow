@@ -1,0 +1,60 @@
+.ItensCarrinhoCheio{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border-radius: 0;
+}
+.ItemDireitaCarrinhoCheio{
+    border-radius: 15px;
+    width: 70%;
+    height: 100%;
+    background-color: aquamarine;
+}
+.ItemEsquerdaCarrinhoCheio{
+    border-radius: 15px;
+    width: 20%;
+    height: 100%;
+    background-color: aquamarine;
+}
+.TitulosCarrinho{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: crimson;
+}
+.TitulosCarrinho>hr{
+    border: none;
+    border-left: 2px dotted black;
+    height: 95%;
+    margin: 0;
+}
+.TituloImagem{
+    width: calc(20% - 10px);
+    height: 100%;
+    background-color: brown;
+    display: flex;
+    align-items: center;
+}
+.TituloImagem>p, .TituloNome>p, .TituloQtddxPreco>p{
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+.TituloNome{
+    width: 60%;
+    height: 100%;
+    background-color: violet;
+    display: flex;
+    align-items: center;
+}
+.TituloQtddxPreco{
+    width: calc(20% - 10px);
+    height: 100%;
+    background-color: honeydew;
+    display: flex;
+    align-items: center;
+}

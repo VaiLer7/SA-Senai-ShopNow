@@ -17,19 +17,7 @@
         <div class="PropagandaMeio">
             <img src="/img/imgProdutos/6e4cf819689faeeeef2c57858140d66a.png">
         </div>
-        <script>
-            function PropagandaFechar(){
-                const propaganda = document.getElementById('id07').style;
-
-                propaganda.display = 'none';
-                m=60000;
-                setTimeout(AbrirPropaganda, 10*m);
-
-                function AbrirPropaganda(){
-                    propaganda.display = 'flex';
-                }
-            }
-        </script>
+        <script src="/js/PropagandaPopUp.js"></script>
     </div>
     <div id="id06" class="CookiesOpcoes">
         <div class="CookiesOpcoesCima">
@@ -78,7 +66,7 @@
             </button>
             <div class="CookiesTiposOculto">
                 <div>
-                    <p>HelloBar</p>
+                    <p>Hello Bar</p>
                     <input type="checkbox">
                 </div>
                 <div>
@@ -332,70 +320,7 @@
                         <p style="cursor: default; margin: 0;">Já possui cadastro?</p>
                         <p onclick="document.getElementById('id02').style.display='none', document.getElementById('id01').style.display='block'" id="ghvgew78gt">Clique aqui!</p>
                     </div>
-                    <script>
-                        function TrocarDIA(botaoClicado){
-                            var botoes = []
-                            for (var i = 1; i <= 31; i++) {
-                                botoes.push("DIAbtn" + i);
-                            }
-                            var DIAPrincipal = document.getElementById("DIAPrincipal");
-                            
-                            for (var i = 0; i < botoes.length; i++) {
-                                var botao = document.getElementById(botoes[i]);
-
-                                if (botao == botaoClicado) {
-                                DIAPrincipal.innerHTML = botao.innerHTML;
-                                break;
-                                }
-                            }
-                        }
-                        function TrocarMES(botaoClicado){
-                            var botoes = [];
-                            for (var i = 1; i <= 12; i++) {
-                                botoes.push("MESbtn" + i);
-                            }
-                            var MESPrincipal = document.getElementById("MESPrincipal");
-
-                            for (var i = 0; i < botoes.length; i++) {
-                                var botao = document.getElementById(botoes[i]);
-
-                                if (botao == botaoClicado) {
-                                MESPrincipal.innerHTML = botao.innerHTML;
-                                break;
-                                }
-                            }
-                        }
-                        function TrocarAno(botaoClicado){
-                            var botoes = []
-                            for (var i = 1; i <= 124; i++) {
-                                botoes.push("ANObtn" + i);
-                            }
-                            var ANOPrincipal = document.getElementById("ANOPrincipal");
-                            
-                            for (var i = 0; i < botoes.length; i++) {
-                                var botao = document.getElementById(botoes[i]);
-
-                                if (botao == botaoClicado) {
-                                ANOPrincipal.innerHTML = botao.innerHTML;
-                                break;
-                                }
-                            }
-                        }
-
-                        function TrocarDDI(botaoClicado) {
-                            var botoes = ["DDIbtn1", "DDIbtn2", "DDIbtn3", "DDIbtn4", "DDIbtn5", "DDIbtn6", "DDIbtn7", "DDIbtn8"];
-                            var DDIPrincipal = document.getElementById("DDIPrincipal");
-
-                            for (var i = 0; i < botoes.length; i++) {
-                                var botao = document.getElementById(botoes[i]);
-
-                                if (botao == botaoClicado) {
-                                DDIPrincipal.innerHTML = botao.innerHTML;
-                                break;
-                                }
-                            }
-                        }
-                    </script>
+                    <script src="/js/TrocarIdade.js"></script>
                 </div>
             </div>
             <div class="PopUpInferior">
@@ -533,9 +458,6 @@
             </div>
         </div>
     </div>
-
-
-
     <div class="Cabecalho">
         <div class="CabecalhoPrincipal">
             <div class="logopart">
@@ -549,7 +471,7 @@
                 </div>
             </div>
             <div class="Botoes">
-                <a class="ABotaoCarrinho" href="/carrinho">
+                <a class="ABotaoCarrinho" href="./CarrinhoVazio.html">
                     <button class="BotaoCarrinho">
                         <img class="CarrinhoImagem" src="img/assets/carrinho.svg" height="40">
                         <strong class="CarrinhoTexto">Carrinho</strong>
@@ -643,30 +565,7 @@
                     <img src="/img/assets/setacima.svg">
                 </a>
             </div>
-            <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-
-                function showSlides(n) {
-                    let i;
-                    let slides = document.getElementsByClassName("mySlides");
-                    if (n > slides.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = slides.length}
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                }
-                setInterval(nextSlide, 7000);
-                
-                function nextSlide() {
-                    plusSlides(1);
-                }
-            </script>
+            <script src="/js/SlideShow.js"></script>
         </div>
         <br><br>
         <div class="Produtos">
@@ -1094,23 +993,7 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    // seleciona todos os elementos com classe "Item1"
-                    const itens = document.querySelectorAll(".Item");
-
-                    // itera sobre cada elemento com classe "Item1"
-                    itens.forEach(item => {
-                        const descontoPorcentagem = item.querySelector(".DescontoItem > div > p").textContent.trim();
-                        const porcentagem = parseFloat(descontoPorcentagem.split(" ")[0]);
-                        const valorTotal = parseFloat(item.querySelector(".SalvoItem > span > strike").textContent.trim().replace("R$ ", "").replace(".", "").replace(",", "."));
-                        const desconto = (porcentagem / 100) * valorTotal;
-                        const valorDescontoElemento = item.querySelector(".SalvoItem > div > h5:nth-of-type(2)");
-                        valorDescontoElemento.textContent = `R$ ${desconto.toFixed(2)}`;
-                        const valorDescontoTotalElemento = item.querySelector(".SalvoItem > span > p");
-                        const valorDescontoTotal = valorTotal - desconto;
-                        valorDescontoTotalElemento.textContent = `R$ ${valorDescontoTotal.toFixed(2)}`;
-                    });
-                </script>
+                <script src="/js/Item1Calculo.js"></script>
             </div>
         </div>
         <br><br>
@@ -2196,85 +2079,7 @@
                 </div>
             </div>
         </div>
-        <script>
-
-            //Função de click do botão para arrastar o scroll
-
-            const itemWrapper = document.querySelector('.ItemWrapper2');
-            const voltarBtn = document.querySelector('.Itens2>button:nth-child(1)');
-            const avancarBtn = document.querySelector('.Itens2>button:nth-child(2)');
-        
-            voltarBtn.addEventListener('click', () => {
-                itemWrapper.scrollBy({
-                    left: -300,
-                    behavior: 'smooth'
-                });
-            });
-            avancarBtn.addEventListener('click', () => {
-                itemWrapper.scrollBy({
-                    left: +300,
-                    behavior: 'smooth'
-                });
-            });
-
-
-
-
-            //Calculo de preço&desconto das classes Item2 e Item3
-            
-            // Obter todos os elementos com a classe "ItemBaixo" e iterar sobre cada elemento
-            document.querySelectorAll('.ItemBaixo').forEach((itemBaixoElement) => {
-                const TextoValorTotal = itemBaixoElement.querySelector('.ItemPrecoDesconto strike');
-                const TextoDesconto= itemBaixoElement.querySelector('.ItemPrecoDesconto p');
-
-                const ValorTotal = parseFloat(TextoValorTotal.textContent.replace(/[^0-9,-]+/g,"").replace(",", "."));
-                var Desconto = parseFloat(TextoDesconto.textContent.replace(/[^0-9,-]+/g,""));
-                if(Desconto<0){
-                    Desconto = (Desconto * -1);
-                }
-
-                const PrecoFinal = ValorTotal - (ValorTotal * (Desconto / 100));
-                const PrecoFinalFormatado = `R$ ${PrecoFinal.toFixed(2)}`;
-
-                itemBaixoElement.querySelector('.ItemPrecoDescontoTotal').textContent += ' ' + PrecoFinalFormatado;
-            });
-
-
-
-
-            //Calculo de Avaliação de estrelas
-
-            // Seleciona todos os elementos com a classe ".Item2Cima" e itera sobre cada um deles
-            document.querySelectorAll('.ItemCima').forEach((itemCimaElement) => {
-                const [valor] = itemCimaElement.querySelector('div>p:nth-child(3)').textContent.split('/');
-
-                const porcentagem = 100 - ((valor / 10) * 100);
-
-                itemCimaElement.querySelector('.EstrelasCover').style.height = `${porcentagem}%`;
-            });
-
-
-
-
-            //Calculo de preço&desconto da classe Item1
-
-            // itera sobre cada elemento com classe "Item1"
-            document.querySelectorAll(".Item1").forEach(item => {
-                const descontoPorcentagem = item.querySelector(".DescontoItem > div > p").textContent.trim();
-                const porcentagem = parseFloat(descontoPorcentagem.split(" ")[0]);
-                const valorTotal = parseFloat(item.querySelector(".SalvoItem > span > strike").textContent.trim().replace("R$ ", "").   replace(".", "").replace(",", "."));
-                const desconto = (porcentagem / 100) * valorTotal;
-                const valorDescontoElemento = item.querySelector(".SalvoItem > div > h5:nth-of-type(2)");
-                valorDescontoElemento.textContent = `R$ ${desconto.toFixed(2)}`;
-                const valorDescontoTotalElemento = item.querySelector(".SalvoItem > span > p");
-                const valorDescontoTotal = valorTotal - desconto;
-                valorDescontoTotalElemento.textContent = `R$ ${valorDescontoTotal.toFixed(2)}`;
-            });
-
-            function FuncaoVoltar(){
-                document.documentElement.scrollTop = 0;
-            }
-        </script>
+        <script src="/js/Scroll-Desconto-Avaliacao.js"></script>
     </div>
     <footer>
         <button class="VoltarFooter" onclick="FuncaoVoltar()">
