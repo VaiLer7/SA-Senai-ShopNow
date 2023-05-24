@@ -1,22 +1,22 @@
 .ItensCarrinhoCheio{
-    height: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
     border-radius: 0;
+    height: fit-content;
 }
 .ItemDireitaCarrinhoCheio{
     border-radius: 15px;
     width: 70%;
     height: 100%;
-    background-color: aquamarine;
+    background-color: transparent;
 }
 .ItemEsquerdaCarrinhoCheio{
     border-radius: 15px;
     width: 20%;
     height: 100%;
-    background-color: aquamarine;
+    background-color: lightgray;
 }
 
 .TitulosCarrinho{
@@ -25,7 +25,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: crimson;
+    border-radius: 15px 15px 0 0;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 
@@ -33,15 +38,16 @@
 .TitulosCarrinho>hr{
     border: none;
     border-left: 2px dotted black;
-    height: 95%;
+    height: 70%;
     margin: 0;
 }
 .TituloImagem{
     width: calc(20% - 10px);
     height: 100%;
-    background-color: brown;
+    background-color: transparent;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .TituloImagem>p, .TituloNome>p, .TituloQtddxPreco>p{
     margin: 0;
@@ -51,20 +57,105 @@
 .TituloNome{
     width: 60%;
     height: 100%;
-    background-color: violet;
+    background-color: transparent;
     display: flex;
     align-items: center;
 }
 .TituloQtddxPreco{
     width: calc(20% - 10px);
     height: 100%;
-    background-color: honeydew;
+    background-color: transparent;
     display: flex;
     align-items: center;
 }
-.ProdutosCarrinho{
+.ProdutoCarrinho{
     width: 100%;
-    height: calc(100% - 50px);
+    height: 150px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.ProdutoCarrinho>hr{
+    border: none;
+    border-left: 2px dotted black;
+    height: 70%;
+    margin: 0;
+}
+.ProdutosCarrinho{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-radius: 0 0 15px 15px;
+}
+.ProdutoImagem{
+    width: calc(20% - 10px);
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ProdutoImagem>img{
+    max-width: 95%;
+    max-height: 95%;
+}
+.ProdutoNome{
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+.ProdutoNome>p{
+    margin: 0;
+    font-size: 20px;
+}
+.ProdutoQtddxPreco{
+    width: calc(20% - 10px);
+    height: 100%;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.ProdutoQtdd{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ProdutoQtdd>button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.ProdutoQtdd>button>img{
+    height: 15px;
+}
+.ProdutoQtdd>button:nth-child(1)>img{
+    filter: brightness(200%);
+}
+
+.ProdutoPreco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.ProdutoPreco>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ProdutoPreco>div>p{
+    margin: 0;
 }
