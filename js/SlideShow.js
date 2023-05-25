@@ -15,8 +15,8 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
 }
-    setInterval(nextSlide, 7000);
+setInterval(nextSlide, 7000);
                 
-    function nextSlide() {
-        plusSlides(1);
-    }
+function nextSlide() {
+    plusSlides(1);
+}
