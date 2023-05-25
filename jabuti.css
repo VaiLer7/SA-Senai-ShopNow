@@ -1,0 +1,37 @@
+.fatherproduct{
+    width: 100%;    
+    margin: 0;
+    background-color: red;
+  }
+  .elementsproduct{
+    width: 100%;
+    background-color: yellow;
+  
+  }
+  .CodAndOriginProduct{
+    display: flex;
+    align-items: center;
+  }
+  .CodAndOriginProduct>hr{
+    height: 10px;
+    border: none;
+    border-left: 2px dotted black;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .ImageAndPrice{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: orange;
+  }
+  .ImageAnd{
+    width: 60%;
+    height: 100px;
+    background-color: blue;
+  }
+  .PriceAnd{
+    width: 39%;
+    height: 100px;
+    background-color: green;
+  }
