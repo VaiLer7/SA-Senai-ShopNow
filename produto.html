@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="jacare.css">
     <link rel="stylesheet" href="jabuti.css">
 </head>
+
 <body>
     <!-- <div id="id07" class="Propaganda">
         <div class="PropagandaCima">
@@ -175,7 +177,8 @@
             </div>
             <div class="PopUpInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id03').style.display='none', document.getElementById('id04').style.display='block'">
+                    <button type="button"
+                        onclick="document.getElementById('id03').style.display='none', document.getElementById('id04').style.display='block'">
                         <p style="margin: 0;">Continuar</p>
                         <img src="/img/assets/enviar.svg" height="40px">
                     </button>
@@ -223,16 +226,16 @@
                                         const BotaoDia = document.createElement("button");
                                         BotaoDia.id = "DIAbtn" + i;
                                         BotaoDia.innerHTML = "<p>" + i + "</p>";
-                                        BotaoDia.onclick = function() {
+                                        BotaoDia.onclick = function () {
                                             TrocarDIA(this);
                                         }
                                         document.getElementById("BotoesDias1").appendChild(BotaoDia);
-                                    } 
+                                    }
                                     for (let i = 17; i <= 31; i++) {
                                         const BotaoDia = document.createElement("button");
                                         BotaoDia.id = "DIAbtn" + i;
                                         BotaoDia.innerHTML = "<p>" + i + "</p>";
-                                        BotaoDia.onclick = function() {
+                                        BotaoDia.onclick = function () {
                                             TrocarDIA(this);
                                         }
                                         document.getElementById("BotoesDias2").appendChild(BotaoDia);
@@ -240,7 +243,9 @@
                                 </script>
                             </div>
                             <button style="width: 49px;">
-                                <span id="DIAPrincipal"><p>Dia</p></span>
+                                <span id="DIAPrincipal">
+                                    <p>Dia</p>
+                                </span>
                                 <img src="/img/assets/setacima.svg" height="10px" id="f12hg">
                             </button>
                         </span>
@@ -248,93 +253,135 @@
                             <div class="hiddenOverlayPadrao"></div>
                             <div class="OverlayPadrao OverlayMes fade2"">
                                 <div>
-                                    <button id="MESbtn1" onclick="TrocarMES(this)"><p>Janeiro</p></button>
-                                    <button id="MESbtn2" onclick="TrocarMES(this)"><p>Fevereiro</p></button>
-                                    <button id="MESbtn3" onclick="TrocarMES(this)"><p>Março</p></button>
-                                    <button id="MESbtn4" onclick="TrocarMES(this)"><p>Abril</p></button>
-                                    <button id="MESbtn5" onclick="TrocarMES(this)"><p>Maio</p></button>
-                                    <button id="MESbtn6" onclick="TrocarMES(this)"><p>Junho</p></button>
-                                    <button id="MESbtn7" onclick="TrocarMES(this)"><p>Julho</p></button>
-                                    <button id="MESbtn8" onclick="TrocarMES(this)"><p>Agosto</p></button>
-                                    <button id="MESbtn9" onclick="TrocarMES(this)"><p>Setembro</p></button>
-                                    <button id="MESbtn10" onclick="TrocarMES(this)"><p>Outubro</p></button>
-                                    <button id="MESbtn11" onclick="TrocarMES(this)"><p>Novembro</p></button>
-                                    <button id="MESbtn12" onclick="TrocarMES(this)"><p>Dezembro</p></button>
-                                </div>
+                                    <button id=" MESbtn1" onclick="TrocarMES(this)">
+                                <p>Janeiro</p></button>
+                                <button id="MESbtn2" onclick="TrocarMES(this)">
+                                    <p>Fevereiro</p>
+                                </button>
+                                <button id="MESbtn3" onclick="TrocarMES(this)">
+                                    <p>Março</p>
+                                </button>
+                                <button id="MESbtn4" onclick="TrocarMES(this)">
+                                    <p>Abril</p>
+                                </button>
+                                <button id="MESbtn5" onclick="TrocarMES(this)">
+                                    <p>Maio</p>
+                                </button>
+                                <button id="MESbtn6" onclick="TrocarMES(this)">
+                                    <p>Junho</p>
+                                </button>
+                                <button id="MESbtn7" onclick="TrocarMES(this)">
+                                    <p>Julho</p>
+                                </button>
+                                <button id="MESbtn8" onclick="TrocarMES(this)">
+                                    <p>Agosto</p>
+                                </button>
+                                <button id="MESbtn9" onclick="TrocarMES(this)">
+                                    <p>Setembro</p>
+                                </button>
+                                <button id="MESbtn10" onclick="TrocarMES(this)">
+                                    <p>Outubro</p>
+                                </button>
+                                <button id="MESbtn11" onclick="TrocarMES(this)">
+                                    <p>Novembro</p>
+                                </button>
+                                <button id="MESbtn12" onclick="TrocarMES(this)">
+                                    <p>Dezembro</p>
+                                </button>
                             </div>
-                            <button style="border-radius: 0;">
-                                <span id="MESPrincipal">Mês</span>
-                                <img src="/img/assets/setacima.svg" height="10px">
-                            </button>
-                        </span>
-                        <span class="CadastroTorsoSpan" style="width: 55px;">
-                            <div class="hiddenOverlayPadrao"></div>
-                            <div class="OverlayPadrao OverlayAno fade2"">
-                                <div id="BotoesAnos"></div>
-                                <script>
-                                    for (let i = 2023; i >= 1900; i--) {
-                                        const BotaoAno = document.createElement("button");
-                                        BotaoAno.id = "ANObtn" + (2023 - i + 1);
-                                        BotaoAno.innerHTML = "<p>" + i + "</p>";
-                                        BotaoAno.onclick = function() {
-                                            TrocarAno(this);
-                                        }
-                                        document.getElementById("BotoesAnos").appendChild(BotaoAno);
-                                    }                             
-                                </script>
-                            </div>
-                            <button style="border-radius: 0 10px 10px 0;">
-                                <span id="ANOPrincipal">Ano</span>
-                                <img src="/img/assets/setacima.svg" height="10px">
-                            </button>
-                        </span>
                     </div>
-                    <br>
-                    <label><b>Telefone:</b></label>
-                    <div class="TelefoneCadastro">
-                        <span class="CadastroTorsoSpan">
-                            <div class="hiddenOverlayPadrao"></div>
-                            <div class="OverlayPadrao OverlayDDI fade2">
-                                <div>
-                                    <button id="DDIbtn1" onclick="TrocarDDI(this)"><p>+55</p></button>
-                                    <button id="DDIbtn2" onclick="TrocarDDI(this)"><p>+45</p></button>
-                                    <button id="DDIbtn3" onclick="TrocarDDI(this)"><p>+35</p></button>
-                                    <button id="DDIbtn4" onclick="TrocarDDI(this)"><p>+25</p></button>
-                                    <button id="DDIbtn5" onclick="TrocarDDI(this)"><p>+15</p></button>
-                                    <button id="DDIbtn6" onclick="TrocarDDI(this)"><p>+115</p></button>
-                                    <button id="DDIbtn7" onclick="TrocarDDI(this)"><p>+65</p></button>
-                                    <button id="DDIbtn8" onclick="TrocarDDI(this)"><p>+75</p></button>
-                                </div>
-                            </div>
-                            <button>
-                                <span id="DDIPrincipal"><p>+55</p></span>
-                                <img src="/img/assets/setacima.svg" height="10px" id="f12hg">
-                            </button>
-                        </span>
-                        <span id="g435gr2"></span>
-                        <span>
-                            <input type="text" placeholder="Digite seu número"></input>
-                        </span>
-                    </div>
-                    <br>
-                    <div style="display: flex;">
-                        <p style="cursor: default; margin: 0;">Já possui cadastro?</p>
-                        <p onclick="document.getElementById('id02').style.display='none', document.getElementById('id01').style.display='block'" id="ghvgew78gt">Clique aqui!</p>
-                    </div>
-                    <script src="/js/TrocarIdade.js"></script>
-                </div>
-            </div>
-            <div class="PopUpInferior">
-                <div>
-                    <button type="button" onclick="document.getElementById('id02').style.display='none'">
-                        <p style="margin: 0;">Continuar</p>
-                        <img src="/img/assets/enviar.svg" height="40px">
+                    <button style="border-radius: 0;">
+                        <span id="MESPrincipal">Mês</span>
+                        <img src="/img/assets/setacima.svg" height="10px">
                     </button>
+                    </span>
+                    <span class="CadastroTorsoSpan" style="width: 55px;">
+                        <div class="hiddenOverlayPadrao"></div>
+                        <div class="OverlayPadrao OverlayAno fade2"">
+                                <div id=" BotoesAnos"></div>
+                        <script>
+                            for (let i = 2023; i >= 1900; i--) {
+                                const BotaoAno = document.createElement("button");
+                                BotaoAno.id = "ANObtn" + (2023 - i + 1);
+                                BotaoAno.innerHTML = "<p>" + i + "</p>";
+                                BotaoAno.onclick = function () {
+                                    TrocarAno(this);
+                                }
+                                document.getElementById("BotoesAnos").appendChild(BotaoAno);
+                            }                             
+                        </script>
                 </div>
+                <button style="border-radius: 0 10px 10px 0;">
+                    <span id="ANOPrincipal">Ano</span>
+                    <img src="/img/assets/setacima.svg" height="10px">
+                </button>
+                </span>
             </div>
-        </form>
+            <br>
+            <label><b>Telefone:</b></label>
+            <div class="TelefoneCadastro">
+                <span class="CadastroTorsoSpan">
+                    <div class="hiddenOverlayPadrao"></div>
+                    <div class="OverlayPadrao OverlayDDI fade2">
+                        <div>
+                            <button id="DDIbtn1" onclick="TrocarDDI(this)">
+                                <p>+55</p>
+                            </button>
+                            <button id="DDIbtn2" onclick="TrocarDDI(this)">
+                                <p>+45</p>
+                            </button>
+                            <button id="DDIbtn3" onclick="TrocarDDI(this)">
+                                <p>+35</p>
+                            </button>
+                            <button id="DDIbtn4" onclick="TrocarDDI(this)">
+                                <p>+25</p>
+                            </button>
+                            <button id="DDIbtn5" onclick="TrocarDDI(this)">
+                                <p>+15</p>
+                            </button>
+                            <button id="DDIbtn6" onclick="TrocarDDI(this)">
+                                <p>+115</p>
+                            </button>
+                            <button id="DDIbtn7" onclick="TrocarDDI(this)">
+                                <p>+65</p>
+                            </button>
+                            <button id="DDIbtn8" onclick="TrocarDDI(this)">
+                                <p>+75</p>
+                            </button>
+                        </div>
+                    </div>
+                    <button>
+                        <span id="DDIPrincipal">
+                            <p>+55</p>
+                        </span>
+                        <img src="/img/assets/setacima.svg" height="10px" id="f12hg">
+                    </button>
+                </span>
+                <span id="g435gr2"></span>
+                <span>
+                    <input type="text" placeholder="Digite seu número"></input>
+                </span>
+            </div>
+            <br>
+            <div style="display: flex;">
+                <p style="cursor: default; margin: 0;">Já possui cadastro?</p>
+                <p onclick="document.getElementById('id02').style.display='none', document.getElementById('id01').style.display='block'"
+                    id="ghvgew78gt">Clique aqui!</p>
+            </div>
+            <script src="/js/TrocarIdade.js"></script>
     </div>
-    
+    </div>
+    <div class="PopUpInferior">
+        <div>
+            <button type="button" onclick="document.getElementById('id02').style.display='none'">
+                <p style="margin: 0;">Continuar</p>
+                <img src="/img/assets/enviar.svg" height="40px">
+            </button>
+        </div>
+    </div>
+    </form>
+    </div>
+
     <div id="id01" class="TudoPopUp">
         <form class="PopUp fade2">
             <div class="PopUpSuperior">
@@ -352,7 +399,10 @@
                 <br>
                 <div id="efg6123a" style="display: flex; justify-content: space-between;">
                     <span>
-                        <a href="#" style="color: black;" onclick="document.getElementById('id01').style.display='none', document.getElementById('id02').style.display='block'"><p>Não possui cadastro?</p></a>
+                        <a href="#" style="color: black;"
+                            onclick="document.getElementById('id01').style.display='none', document.getElementById('id02').style.display='block'">
+                            <p>Não possui cadastro?</p>
+                        </a>
                     </span>
                     <div style="display: flex;">
                         <input type="checkbox" checked="checked">
@@ -361,27 +411,29 @@
                 </div>
                 <br>
                 <span>
-                    <a id="w78gh98" onclick="document.getElementById('id01').style.display='none', document.getElementById('id03').style.display='block'">Esqueceu a senha ou E-mail?</a>
+                    <a id="w78gh98"
+                        onclick="document.getElementById('id01').style.display='none', document.getElementById('id03').style.display='block'">Esqueceu
+                        a senha ou E-mail?</a>
                 </span>
             </div>
-                <div class="PopUpInferior">
-                    <div>
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'">
-                            <p style="margin: 0;">Continuar</p>
-                            <img src="/img/assets/enviar.svg" height="40px">
-                        </button>
-                    </div>
+            <div class="PopUpInferior">
+                <div>
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'">
+                        <p style="margin: 0;">Continuar</p>
+                        <img src="/img/assets/enviar.svg" height="40px">
+                    </button>
                 </div>
             </div>
-        </form>
-        <script>
-            var TudoLogin = document.getElementById('id01');
-            window.onclick = function(event) {
-                if (event.target == TudoLogin) {
-                    TudoLogin.style.display = "none";
-                }
+    </div>
+    </form>
+    <script>
+        var TudoLogin = document.getElementById('id01');
+        window.onclick = function (event) {
+            if (event.target == TudoLogin) {
+                TudoLogin.style.display = "none";
             }
-        </script>
+        }
+    </script>
     </div>
 
 
@@ -397,7 +449,8 @@
                 </div>
             </div>
         </div>
-        <hr style="height: 4px; width: 90%; background-color: #99bdc0; border-color: #99bdc0; border-radius: 2px;" noshade>
+        <hr style="height: 4px; width: 90%; background-color: #99bdc0; border-color: #99bdc0; border-radius: 2px;"
+            noshade>
         <div style="margin-top: 40px;">
             <a class="AMenuBotoes" href="/configuracoes">
                 <button class="MenuBotoes">
@@ -444,7 +497,8 @@
                         </a>
                         <a class="ARedeSocialBotao" href="https://www.facebook.com">
                             <button class="RedeSocialBotoes">
-                                <img class="RedeSocialImagem" src="/img/imgRedesSociais/facebook.png" style="border-radius: 5px;height: 30px;">
+                                <img class="RedeSocialImagem" src="/img/imgRedesSociais/facebook.png"
+                                    style="border-radius: 5px;height: 30px;">
                                 <strong class="RedeSocialTexto">Facebook</strong>
                             </button>
                         </a>
@@ -497,11 +551,11 @@
                 <script>
                     function AbrirMenuLateral() {
                         document.getElementById("ElementoMenuLateral").style.width = "260px";
-                    }function FecharMenuLateral() {
+                    } function FecharMenuLateral() {
                         document.getElementById("ElementoMenuLateral").style.width = "0";
                     }
                 </script>
-                <hr id="nu37tfs"> 
+                <hr id="nu37tfs">
             </div>
             <div class="Categorias">
                 <a class="CategoriaAtual" href="/">Tudo</a>
@@ -518,23 +572,32 @@
         </div>
     </div>
     <br>
-        
+
 
     <div class="fatherproduct">
         <div class="elementsproduct">
             <div class="nametextproduct">
-                <h1>Teclado Mecanico Redragon Kumara Wireless,  RGB Switch Marrom, Branco, K552RGB-BRS-W</h1>
+                <h1 class="NameProduct">Teclado Mecanico Redragon Kumara Wireless, RGB Switch Marrom, Branco, Azul K552RGB-BRS-W</h1>
             </div>
-                <div class="CodAndOriginProduct">
-                    <p>Código de Produto: h2ia8j316ke194d</p> <hr> <p>Origem de Fabricação do Produto: China</p>
-                </div>
-                    <div class="ImageAndPrice">
-                        <div class="ImageAnd"> 1
-                        </div>
-                        <div class="PriceAnd"> 1
-                        </div>
-
+            <div class="CodAndOriginProduct">
+                <p>Código de Produto: h2ia8j316ke194d</p>
+                <hr>
+                <p>Origem de Fabricação do Produto: China</p>
+            </div>
+            <div class="ImageAndPrice">
+                <div class="ImageAnd">
+                    <div class="MoreImages">
+                        <div class="SquareImage">1</div>
+                        <div class="SquareImage">2</div>
+                        <div class="SquareImage">3</div>
+                        <div class="SquareImage SquarePlus">4</div>
                     </div>
+                    <div class="SquareBig">5</div>
+                </div>
+                <div class="PriceAnd">
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -577,24 +640,26 @@
                     <p>Email e SAC</p>
                     <img src="/img/assets/emailsimbolo.svg" />
                 </div>
-                    <div>
-                        <p>cassolrodamurcha@gmail.com</p>
-                    </div>
+                <div>
+                    <p>cassolrodamurcha@gmail.com</p>
                 </div>
+            </div>
             <div class="PagamentoWrapperFooter">
                 <div class="PagamentoFooter">
                     <p>Cartões</p>
-                    <img src="/img/assets/cartaosimbolo.svg"/>
+                    <img src="/img/assets/cartaosimbolo.svg" />
                 </div>
-                <div class="CartoesFooter">  
+                <div class="CartoesFooter">
                     <img src="/img/bandeiras-de-cartoes-de-credito.png">
                 </div>
             </div>
         </div>
         <hr>
         <div class="DireitosFooter">
-            <p>2021 Pendant © All Rights Reserved - Todos os direitos reservados. Os preços anunciados neste site ou via e-mail promocional podem ser alterados sem prévio aviso.</p>
+            <p>2021 Pendant © All Rights Reserved - Todos os direitos reservados. Os preços anunciados neste site ou via
+                e-mail promocional podem ser alterados sem prévio aviso.</p>
         </div>
     </footer>
 </body>
+
 </html>
