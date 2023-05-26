@@ -145,17 +145,30 @@ margin-bottom: 10px;
   width: 100%;
   height: 50%;
   background-color: rosybrown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.ButtonSayProduct{
+.ButtonAddProduct{
   width: 100%;
   height: 50%;
   background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.GiveCarriho{
+.GiveCarrinho{
   font-size: 30px;
   font-weight: bold;
 }
 .CompreNow{
   font-size: 30px;
   font-weight: bold;
+}
+.GiveCarrinhoo{
+  padding: 15px;
+  background-color: yellow;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
 }
