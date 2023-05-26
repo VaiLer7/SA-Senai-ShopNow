@@ -11,8 +11,10 @@
   .elementsproduct{
     width: 100%;
     /* background-color: yellow; */
-    max-width: 2000px;
-    max-height: 2000px;
+    max-width: 1500px;
+    max-height: fit-content;
+    min-width: 1200px;
+    min-height: fit-content;
   }
   .CodAndOriginProduct{
     display: flex;
@@ -34,44 +36,126 @@
   .ImageAnd{
     width: 60%;
     height: 600px;
-    background-color: #e4f5f6;
+    background-color: rgb(206, 233, 236);
     display: flex;
+    justify-content: space-around;
     align-items: center;
   }
   .PriceAnd{
     width: 39%;
     height: 600px;
-    background-color: #e4f5f6;
-    /* display: flex;
-    align-items: center; */
+    background-color: rgb(0, 229, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   .MoreImages{
     width: 20%;
-    height: 85%;
-    /* background-color: fuchsia; */
+    height: 95%;
+    /* background-color: ; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    /* gap: 20px; */
+    gap: 20px;
+    cursor: pointer;
 }
 .SquareImage{
-    width: 70%;
-    height: 50%;
+    width: 80%;
+    height: 25%;
     display: flex;
-    background-color:rgb(223, 223, 147);
-    margin-top: 25px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid gray;
+}
+.SquareImage>img{
+  max-width: 100%;
+  max-height: 100%;
 }
 .SquarePlus{
   /* é o quadrado +1    */
 }
+.SquarePlus>p{
+  font-size: 60px;
+  margin: 0;
+}
 .SquareBig{
-  width: 77%;
-  height: 81%;
-  background-color: rgb(223, 223, 147);
+  width: 70%;
+  height: 95%;
   display: flex;
-  margin-top: 22.9px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  border: 3px dashed gray;
+}
+.SquareBig>img{
+  max-width: 100%;
+  max-height: 100%;
+
 }
 .NameProduct {
 margin-bottom: 10px;
+}
+
+
+.FatherRating{
+  width: 90%;
+  height: 20%;
+  background-color: brown;
+}
+.FatherPrice{
+  width: 90%;
+  height: 30%;
+  background-color: blue;
+}
+.QuantiaEstoque{
+  width: 90%;
+  height: 15%;
+  background-color: rgb(132, 168, 132);
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+.ButtonSayAdd{
+  width: 90%;
+  height: 30%;
+  background-color: gray;
+  
+}
+.CompartilharProduct{
+  cursor: pointer;
+  font-size: 12px;
+}
+.ProductDisp{
+  font-style: italic;
+  font-size: 30px;
+  color: green;
+  font-weight: bold;
+}
+.QuantiTextProduct{
+  color: gray;
+  font-size: 19px;
+  font-weight: bold;
+}
+.ButtonSayProduct{
+  width: 100%;
+  height: 50%;
+  background-color: rosybrown;
+}
+.ButtonSayProduct{
+  width: 100%;
+  height: 50%;
+  background-color: coral;
+}
+.GiveCarriho{
+  font-size: 30px;
+  font-weight: bold;
+}
+.CompreNow{
+  font-size: 30px;
+  font-weight: bold;
 }
