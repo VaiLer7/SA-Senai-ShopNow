@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 29/05</title>
+    <style>
+        button{
+            display: block;
+            margin: 20px auto;
+            cursor: poiter;
+            padding: 6px 10px;
+            border: 0;
+        }
+     .popup-wrapper{
+         display: none;
+         background-color: rgba(0,0,0,.5);
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+     }
+     .popup{
+         text-align: center;
+         width: 300px;
+         margin: 10% auto;
+         padding: 20px;
+         background-color: white;
+        position: relative;     
+        }
+
+        .popup a{
+            background-color: gainsboro;
+            color: white;
+            text-decoration: none;
+            padding: 6px 10px;
+        }
+        .popup-close{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button>Clique aqui</button>
+
+    <div class="popup-wrapper">
+       <div class="popup">
+          <div class="popup-close">x</div>
+          <div class="popup-content">
+             <h2>Popup</h2>
+             <p>Texto para o seu popup!</p>
+
+             <a href="#" class="popup-link">Fechar</a>
+
+            </div>
+          </div>
+    </div>
+
+    <script>
+          const button = document.querySelector('button')
+          const popup = document.querySelector('.popup-wrapper')
+
+          button.addEventListener('click', ()=>{
+             popup.style.display = 'block'
+          })
+    </script>
+</body>
+</html>
