@@ -44,7 +44,7 @@
   .PriceAnd{
     width: 39%;
     height: 600px;
-    background-color: rgb(0, 229, 255);
+    background-color: rgb(206, 233, 236);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,6 +98,7 @@
 }
 .NameProduct {
 margin-bottom: 10px;
+font-weight: normal;
 }
 
 
@@ -114,7 +115,7 @@ margin-bottom: 10px;
 .QuantiaEstoque{
   width: 90%;
   height: 15%;
-  background-color: rgb(132, 168, 132);
+  /* background-color: rgb(132, 168, 132); */
   display: flex;
   /* align-items: center; */
   justify-content: center;
@@ -123,8 +124,7 @@ margin-bottom: 10px;
 .ButtonSayAdd{
   width: 90%;
   height: 30%;
-  background-color: gray;
-  
+  /* background-color: gray; */ 
 }
 .CompartilharProduct{
   cursor: pointer;
@@ -144,7 +144,7 @@ margin-bottom: 10px;
 .ButtonSayProduct{
   width: 100%;
   height: 50%;
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +152,7 @@ margin-bottom: 10px;
 .ButtonAddProduct{
   width: 100%;
   height: 50%;
-  background-color: coral;
+  /* background-color: coral; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,8 +167,32 @@ margin-bottom: 10px;
 }
 .GiveCarrinhoo{
   padding: 15px;
+  background-color: rgb(255, 255, 86);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+.CompreNoow{
+  padding: 15px;
   background-color: yellow;
   border-radius: 30px;
   border: none;
   cursor: pointer;
+}
+.Rating{
+  width: 100%;
+  height: 55%;
+  display: flex;
+  
+  background-color:rgb(255, 255, 86);
+}
+.EyeComents{
+  width: 100%;
+  height: 45%;
+  background-color: red;
+}
+.TextVerComents{
+  font-size: 20px;
+  font-weight: normal;
+  color: grey;
 }
