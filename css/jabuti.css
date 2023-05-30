@@ -169,16 +169,16 @@ font-weight: normal;
   font-weight: bold;
 }
 .GiveCarrinhoo{
-  padding: 15px;
+  padding: 20px;
   background-color: rgb(255, 255, 86);
-  border-radius: 30px;
+  border-radius: 45px;
   border: none;
   cursor: pointer;
 }
 .CompreNoow{
-  padding: 15px;
+  padding: 20px;
   background-color: yellow;
-  border-radius: 30px;
+  border-radius: 45px;
   border: none;
   cursor: pointer;
 }
