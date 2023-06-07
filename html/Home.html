@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/jacare.css">
 </head>
 <body>
-    <!-- <div id="id07" class="Propaganda">
+    <div id="id07" class="Propaganda">
         <div class="PropagandaCima">
             <button onclick="PropagandaFechar()">
                 <img src="/img/assets/Xfechar.svg">
@@ -24,73 +24,80 @@
             <img src="/img/assets/configurações.svg">
             <p>Opções</p>
         </div>
-        <div class="CookiesOpcoesMeio">
+        <ul class="CookiesOpcoesMeio">
+            <li class="SecaoCookies">
+                <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                    <img src="/img/assets/setacima.svg">
+                    <p>Essenciais</p>
+                </button>
+                <div class="InsideListCookies">
+                    <label class="IndividualCookies">
+                        <p>Rock Consent</p>
+                        <input type="checkbox" onclick="return false;" checked>
+                    </label>
+                </div>
+            </li>
             <hr>
-            <button class="CookiesTipos">
-                <img src="/img/assets/setacima.svg">
-                <p>Essenciais</p>
-            </button>
-            <div class="CookiesTiposOculto">
-                <div>
-                    <p>Rock Consent</p>
-                    <input type="checkbox" onclick="return false;" checked>
+            <li class="SecaoCookies">
+                <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                    <img src="/img/assets/setacima.svg">
+                    <p>Analíticos</p>
+                </button>
+                <div class="InsideListCookies">
+                    <label class="IndividualCookies">
+                        <p>Google Analytics</p>
+                        <input type="checkbox">
+                    </label>
+                    <label class="IndividualCookies">
+                        <p>Hubspot Analytics</p>
+                        <input type="checkbox">
+                    </label>
+                    <label class="IndividualCookies">
+                        <p>Hubspot Chat</p>
+                        <input type="checkbox">
+                    </label>
+                    <label class="IndividualCookies">
+                        <p>Rock Analytics</p>
+                        <input type="checkbox">
+                    </label>
                 </div>
-            </div>
+            </li>
             <hr>
-            <button class="CookiesTipos">
-                <img src="/img/assets/setacima.svg">
-                <p>Analíticos</p>
-            </button>
-            <div class="CookiesTiposOculto">
-                <div>
-                    <p>Google Analytics</p>
-                    <input type="checkbox">
+            <li class="SecaoCookies">
+                <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                    <img src="/img/assets/setacima.svg">
+                    <p>Performance</p>
+                </button>
+                <div class="InsideListCookies">
+                    <label class="IndividualCookies">
+                        <p>Hello Bar</p>
+                        <input type="checkbox">
+                    </label>
+                    <label class="IndividualCookies">
+                        <p>Google Tag Manager</p>
+                        <input type="checkbox">
+                    </label>
                 </div>
-                <div>
-                    <p>Hubspot Analytics</p>
-                    <input type="checkbox">
-                </div>
-                <div>
-                    <p>Hubspot Chat</p>
-                    <input type="checkbox">
-                </div>
-                <div>
-                    <p>Rock Analytics</p>
-                    <input type="checkbox">
-                </div>
-            </div>
+            </li>
             <hr>
-            <button class="CookiesTipos">
-                <img src="/img/assets/setacima.svg">
-                <p>Performance</p>
-            </button>
-            <div class="CookiesTiposOculto">
-                <div>
-                    <p>Hello Bar</p>
-                    <input type="checkbox">
+            <li class="SecaoCookies">
+                <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                    <img src="/img/assets/setacima.svg">
+                    <p>Propaganda</p>
+                </button>
+                <div class="InsideListCookies">
+                    <label class="IndividualCookies">
+                        <p>Google Ads</p>
+                        <input type="checkbox">
+                    </label>
+                    <label class="IndividualCookies">
+                        <p>Facebook Pixel</p>
+                        <input type="checkbox">
+                    </label>
                 </div>
-                <div>
-                    <p>Google Tag Manager</p>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <hr>
-            <button class="CookiesTipos">
-                <img src="/img/assets/setacima.svg">
-                <p>Propaganda</p>
-            </button>
-            <div class="CookiesTiposOculto">
-                <div>
-                    <p>Google Ads</p>
-                    <input type="checkbox">
-                </div>
-                <div>
-                    <p>Facebook Pixel</p>
-                    <input type="checkbox">
-                </div>
-            </div>
-            <hr>
-        </div>
+            </li>
+        </ul>
+        <script src="/js/MostrarCookies.js"></script>
         <div class="CookiesBaixo CookiesBaixo2">
             <a href="politicas-e-informacoes">Políticas de Privacidade</a>
             <div class="CookiesBotoes">
@@ -114,7 +121,7 @@
                 <button onclick="document.getElementById('id05').style.display='none'"><p>Aceitar</p></button>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
     <div id="id04" class="TudoPopUp">

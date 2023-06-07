@@ -1,3 +1,6 @@
+*>ul{
+  padding: 0;
+}
 body {
   flex-wrap: wrap;
   margin: 0;
@@ -1491,7 +1494,7 @@ footer>hr {
   position: fixed;
   z-index: 2;
   width: 250px;
-  height: 300px;
+  height: fit-content;
   background-color: whitesmoke;
   bottom: 20px;
   left: 20px;
@@ -1505,9 +1508,10 @@ footer>hr {
   height: 10%;
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 .CookiesOpcoesCima>img{
-  height: 80%;
+  height: 20px;
   margin: 0 10px 0 10px;
 }
 .CookiesOpcoesCima>p{
@@ -1515,11 +1519,58 @@ footer>hr {
   font-weight: bold;
 }
 .CookiesOpcoesMeio{
-  height: 60%;
-  overflow-x: hidden;
+  width: 100%;
+  height: fit-content;
+  max-height: 97px;
+  overflow: auto;
 }
 .CookiesOpcoesMeio>hr{
-  margin: 3px;
+  margin: 2px;
+  height: 1px;
+  background-color: #000000;
+  border: none;
+}
+.SecaoCookies{
+  width: 100%;
+  max-height: 20px;
+  overflow: hidden;
+  background-color: transparent;
+  list-style-type: none;
+}
+.BotaoCookies{
+  height: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+}
+.BotaoCookies>p, .IndividualCookies>p{
+  margin: 0;
+}
+.BotaoCookies>p{
+  font-weight: bold;
+  font-size: 14px;
+}
+.BotaoCookies>img{
+  height: 90%;
+  transition: 0.3s;
+}
+.InsideListCookies{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.IndividualCookies{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.IndividualCookies>p{
+  margin-left: 10px;
 }
 
 .CookiesOpcoesMeio::-webkit-scrollbar{
@@ -1536,40 +1587,6 @@ footer>hr {
 }
 .CookiesOpcoesMeio::-webkit-scrollbar-thumb:hover {
   background: grey;
-}
-.CookiesTipos{
-  height: 30px;
-  width: calc(100% - 20px);
-  border: none;
-  background-color: darkgray;
-  display: flex;
-  align-items: center;
-  margin: 0 10px 0 10px;
-  cursor: pointer;
-}
-.CookiesTipos>p{
-  margin: 0;
-}
-.CookiesTipos>img{
-  height: 60%;
-  width: 15px;
-  margin-right: 5px;
-}
-.CookiesTiposOculto>div{
-  display: flex;
-  justify-content: space-between;
-}
-.CookiesTiposOculto>div>p{
-  margin: 5px;
-  margin-left: 10px;
-  font-size: 16px;
-}
-.CookiesTiposOculto>div>input{
-  margin-right: 10px;
-  width: 16px;
-}
-#id06to1, #id06to2, #id06to3, #id06to4{
-  display: none;
 }
 
 .Propaganda{
