@@ -20,7 +20,7 @@
 }
 .ValorTotalCarrinho{
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,5 +213,26 @@
     align-items: center;
 }
 .ProdutoPreco>div>p{
+    margin: 0;
+}
+.ValorProdutosCarrinho{
+    margin: 10px 0 10px 0;
+}
+.ValorProdutosCarrinho>p{
+ margin: 0;
+}
+.FreteCarrinho>input{
+    width: 95%;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+.FreteCarrinho>div{
+    display: flex;
+    gap: 5px;
+    margin: 10px 0 10px 0;
+}
+.FreteCarrinho>div>p, .FreteCarrinho>div>b{
     margin: 0;
 }
