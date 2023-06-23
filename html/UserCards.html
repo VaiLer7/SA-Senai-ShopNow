@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/User.css">
+    <link rel="stylesheet" href="/css/UserCards.css">
+</head>
+<body>
+    <div class="Top">
+        <button class="Voltar">
+            <p>Voltar ao Site</p>
+        </button>
+        <div class="UserPicture">
+            <img src="/img/UserPictures/PlaceHolderUserPicture.png" height="100px">
+            <img src="/img/assets/lapiseditar.svg" height="20px">
+        </div>
+        <div class="UserEmail_Name">
+            <p>hugo_foletto@estudante.sesisenai.org.br</p>
+            <p>Hugo Weiler Foletto</p>
+        </div>
+        <button class="EditarBotao">
+            <p>Editar Informações</p>
+        </button>
+    </div>
+    <div class="Bottom">
+        <div class="Divisoes">
+            <div class="Centralizar">
+                <button class="BotaoEditar" onclick="coverappearence(0, this, 1)">
+                    <p>Alterar Dados</p>
+                </button>
+                <div class="Cover"></div>
+                <div class="Esquerda">
+                    <img src="/img/assets/cartao.svg" alt="" height="200px">
+                    <p>Crédito</p>
+                </div>
+                <div class="Direita">
+                    <input type="text" value="0034 9923 0234 7123">
+                    <div class="Nome_Val">
+                        <input type="text" value="Naira Regina Weiler">
+                        <input type="text" value="7/25">
+                    </div>
+                    <button class="BotaoSalvar" onclick="coverappearence(1, null, 1)">
+                        <p>Salvar Alterações</p>
+                    </button>
+                </div>
+                <script>
+                    function coverappearence(x, elemento, y){
+                        if (x==0){
+                            var centralizarStyle = elemento.closest('.Centralizar');
+                            var coverStyle = centralizarStyle.style.innerHTML = `.Bottom > .Divisoes:only-of-type(` + 2 + `) > .Centralizar > .Cover{ display: none; }`
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </div>

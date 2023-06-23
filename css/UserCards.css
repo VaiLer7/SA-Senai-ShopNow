@@ -1,0 +1,91 @@
+.Divisoes{
+    height: 200px;
+}
+.Centralizar{
+    cursor: default;
+    gap: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.Cover{
+    position: absolute;
+    left: 0; right: 0; bottom: 0; top: 0;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.BotaoEditar{
+    position: absolute;
+    z-index: 3;
+    height: 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.BotaoEditar:hover{
+    opacity: 0.9;
+}
+.Esquerda{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.Esquerda > p{
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    margin-right: 100px;
+}
+.Direita{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.Direita > input{
+    width: calc(90% - 8px);
+    height: 25px;
+    font-size: 22px;
+    border: none;
+    border-radius: 12.5px;
+    padding-left: 10px;
+}
+.Nome_Val{
+    width: 90%;
+}
+.Nome_Val > input{
+    height: 25px;
+    font-size: 22px;
+    border: none;
+    border-radius: 12.5px;
+    padding-left: 10px;
+}
+.Nome_Val > input:nth-child(1){
+    width: 75%;
+}
+.Nome_Val > input:nth-child(2){
+    width: calc(20% - 10px);
+    text-align: center;
+
+}
+.BotaoSalvar{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 25px;
+    font-size: 15px;
+    border: none;
+    border-radius: 15px;
+}
