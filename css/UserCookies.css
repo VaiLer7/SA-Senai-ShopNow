@@ -1,0 +1,59 @@
+.Divisoes{
+    height: fit-content;
+}
+.BotaoWrapper{
+    justify-content: right;
+    margin-top: 10px;
+}
+.Centralizar{
+    background-color: transparent;
+    align-items: normal;
+    height: fit-content;
+}
+.CookiesOpcoesMeio{
+    max-height: fit-content;
+}
+.SecaoCookies{
+    max-height: 35px;
+}
+.BotaoCookies{
+    height: 35px;
+    justify-content: space-between;
+}
+.BotaoCookies>p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.BotaoCookies>img{
+    height: 90%;
+    transition: 0.3s;
+}
+.IndividualCookies>p{
+    font-size: 20px;
+}
+.IndividualCookies>input{
+    width: 15px;
+    height: 15px;
+}
+.BotaoSalvar{
+    background-color: lightgray;
+    border: none;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.BotaoSalvar:hover{
+    background-color: grey;
+}
+.BotaoSalvar>p{
+    font-size: 16px;
+}
+.BotaoSalvar>img{
+    display: none;
+    height: 80%;
+    filter: invert(41%) sepia(83%) saturate(561%) hue-rotate(73deg) brightness(87%) contrast(86%);
+}

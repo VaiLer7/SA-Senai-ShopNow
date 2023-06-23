@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/User.css">
+    <link rel="stylesheet" href="/css/jacare.css">
+    <link rel="stylesheet" href="/css/UserCookies.css">
+</head>
+<body>
+    <div class="Top">
+        <a href="/html/User.html">
+            <button class="Voltar">
+                <img src="/img/assets/setacima.svg">
+                <p>Voltar</p>
+            </button>
+        </a>
+        <div class="UserPicture">
+            <img src="/img/UserPictures/PlaceHolderUserPicture.png" height="100px">
+            <img src="/img/assets/lapiseditar.svg" height="20px">
+        </div>
+        <div class="UserEmail_Name">
+            <p>hugo_foletto@estudante.sesisenai.org.br</p>
+            <p>Hugo Weiler Foletto</p>
+        </div>
+        <button class="EditarBotao">
+            <p>Editar Informações</p>
+        </button>
+    </div>
+    <div class="Bottom">
+        <div class="Divisoes">
+            <div class="Centralizar">
+                <ul class="CookiesOpcoesMeio">
+                    <li class="SecaoCookies">
+                        <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                            <p>Essenciais</p>
+                            <img src="/img/assets/setacima.svg">
+                        </button>
+                        <div class="InsideListCookies">
+                            <label class="IndividualCookies">
+                                <p>Rock Consent</p>
+                                <input type="checkbox" onclick="return false;" checked="">
+                            </label>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="SecaoCookies">
+                        <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                            <p>Analíticos</p>
+                            <img src="/img/assets/setacima.svg">
+                        </button>
+                        <div class="InsideListCookies">
+                            <label class="IndividualCookies">
+                                <p>Google Analytics</p>
+                                <input type="checkbox">
+                            </label>
+                            <label class="IndividualCookies">
+                                <p>Hubspot Analytics</p>
+                                <input type="checkbox">
+                            </label>
+                            <label class="IndividualCookies">
+                                <p>Hubspot Chat</p>
+                                <input type="checkbox">
+                            </label>
+                            <label class="IndividualCookies">
+                                <p>Rock Analytics</p>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="SecaoCookies">
+                        <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                            <p>Performance</p>
+                            <img src="/img/assets/setacima.svg">
+                        </button>
+                        <div class="InsideListCookies">
+                            <label class="IndividualCookies">
+                                <p>Hello Bar</p>
+                                <input type="checkbox">
+                            </label>
+                            <label class="IndividualCookies">
+                                <p>Google Tag Manager</p>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="SecaoCookies">
+                        <button onclick="MostrarCookies(this)" class="BotaoCookies">
+                            <p>Propaganda</p>
+                            <img src="/img/assets/setacima.svg">
+                        </button>
+                        <div class="InsideListCookies">
+                            <label class="IndividualCookies">
+                                <p>Google Ads</p>
+                                <input type="checkbox">
+                            </label>
+                            <label class="IndividualCookies">
+                                <p>Facebook Pixel</p>
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="Divisoes">
+                <div class="Centralizar BotaoWrapper">
+                <button class="BotaoSalvar" onclick="salvarconfiguracao(this)">
+                    <p>Salvar Configurações</p>
+                    <img src="/img/assets/OKicone.svg">
+                </button>
+            </div>
+        </div>
+
+
+
+        <script>
+            function salvarconfiguracao(element){
+                const imagem = element.querySelector('img');
+                const texto = element.querySelector('p');
+                texto.innerHTML = 'Salvo!';
+                imagem.style.display = 'block';
+            }
+
+            function MostrarCookies(element) {
+                var induvidual = element.closest('.SecaoCookies');
+                var img = element.querySelector('img');
+
+                    if (img.style.transform != 'rotate(180deg)') {
+                        induvidual.style.maxHeight = 'fit-content';
+                        img.style.transform = "rotate(180deg)";
+                    } else {
+                        induvidual.style.maxHeight = '35px';
+                        img.style.transform = "rotate(0)";
+                    }
+                }
+        </script>
+    </div>
+</body>
+</html>

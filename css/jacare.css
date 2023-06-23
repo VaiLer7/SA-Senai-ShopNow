@@ -1562,12 +1562,14 @@ footer>hr {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  cursor: default;
 }
 .IndividualCookies{
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .IndividualCookies>p{
   margin-left: 10px;

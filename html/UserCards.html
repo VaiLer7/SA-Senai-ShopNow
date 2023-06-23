@@ -9,9 +9,12 @@
 </head>
 <body>
     <div class="Top">
-        <button class="Voltar">
-            <p>Voltar ao Site</p>
-        </button>
+        <a href="/html/User.html">
+            <button class="Voltar">
+                <img src="/img/assets/setacima.svg">
+                <p>Voltar</p>
+            </button>
+        </a>
         <div class="UserPicture">
             <img src="/img/UserPictures/PlaceHolderUserPicture.png" height="100px">
             <img src="/img/assets/lapiseditar.svg" height="20px">
@@ -27,10 +30,32 @@
     <div class="Bottom">
         <div class="Divisoes">
             <div class="Centralizar">
-                <button class="BotaoEditar" onclick="coverappearence(0, this, 1)">
+                <button class="BotaoEditar" onclick="coverappearence(0, 1)" id="buttondisappear1">
                     <p>Alterar Dados</p>
                 </button>
-                <div class="Cover"></div>
+                <div class="Cover" id="cover1"></div>
+                <div class="Esquerda">
+                    <img src="/img/assets/cartao.svg" alt="" height="200px">
+                    <p>Débito</p>
+                </div>
+                <div class="Direita">
+                    <input type="text" value="0034 9923 0234 7123">
+                    <div class="Nome_Val">
+                        <input type="text" value="Naira Regina Weiler">
+                        <input type="text" value="7/25">
+                    </div>
+                    <button class="BotaoSalvar" onclick="coverappearence(1, 1)" id="buttonappear1">
+                        <p>Salvar Alterações</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="Divisoes">
+            <div class="Centralizar">
+                <button class="BotaoEditar" onclick="coverappearence(0, 2)" id="buttondisappear2">
+                    <p>Alterar Dados</p>
+                </button>
+                <div class="Cover" id="cover2"></div>
                 <div class="Esquerda">
                     <img src="/img/assets/cartao.svg" alt="" height="200px">
                     <p>Crédito</p>
@@ -41,18 +66,36 @@
                         <input type="text" value="Naira Regina Weiler">
                         <input type="text" value="7/25">
                     </div>
-                    <button class="BotaoSalvar" onclick="coverappearence(1, null, 1)">
+                    <button class="BotaoSalvar" onclick="coverappearence(1, 2)" id="buttonappear2">
                         <p>Salvar Alterações</p>
                     </button>
                 </div>
-                <script>
-                    function coverappearence(x, elemento, y){
-                        if (x==0){
-                            var centralizarStyle = elemento.closest('.Centralizar');
-                            var coverStyle = centralizarStyle.style.innerHTML = `.Bottom > .Divisoes:only-of-type(` + 2 + `) > .Centralizar > .Cover{ display: none; }`
-                        }
-                    }
-                </script>
             </div>
         </div>
+        <div class="Divisoes">
+            <div class="Centralizar">
+                <button class="AdicionarCartao">
+                    <img src="/img/assets/Mais.svg" alt="">
+                    <p>Adicionar Mais Um Cartão</p>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            function coverappearence(x, y){
+                coverStyle = document.getElementById('cover' + y).style;
+                buttonDisappear = document.getElementById('buttondisappear' + y).style;
+                buttonAppear = document.getElementById('buttonappear' + y).style;
+
+                if (x==0){
+                    coverStyle.display = 'none';
+                    buttonDisappear.display = 'none';
+                    buttonAppear.display = 'block';
+                }else{
+                    coverStyle.display = 'block';
+                    buttonDisappear.display = 'block';
+                    buttonAppear.display = 'none';
+                }
+            }
+        </script>
     </div>
