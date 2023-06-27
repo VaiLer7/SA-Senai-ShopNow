@@ -138,3 +138,33 @@
 .Sair > img{
     rotate: 180deg;
 }
+.Sessao, .SessaoDiv{
+    height: 60px !important;
+    justify-content: center;
+    background-color: transparent;
+    flex-direction: column;
+}
+.SessaoDiv{
+    height: fit-content;
+}
+.SessaoDiv>hr{
+    width: 95%;
+    margin-bottom: 10px;
+    border: none;
+    border-top: 2px dashed black;
+}
+.withScrollBar::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .withScrollBar::-webkit-scrollbar-track {
+    background: #747474;
+  }
+  
+  .withScrollBar::-webkit-scrollbar-thumb {
+    background: #b6b6b6;
+  }
+  
+  .withScrollBar::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+  }

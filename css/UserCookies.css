@@ -10,6 +10,9 @@
     align-items: normal;
     height: fit-content;
 }
+.Sessao{
+    align-items: center;
+}
 .CookiesOpcoesMeio{
     max-height: fit-content;
 }

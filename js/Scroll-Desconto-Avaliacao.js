@@ -72,5 +72,8 @@ document.querySelectorAll(".Item1").forEach(item => {
 });
 
 function FuncaoVoltar(){
-    document.documentElement.scrollTop = 0;
+    document.documentElement.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }

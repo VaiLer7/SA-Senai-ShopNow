@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/User.css">
+    <link rel="stylesheet" href="/css/UserCookies.css">
+    <link rel="stylesheet" href="/css/UserAlerts.css">
+</head>
+<body>
+    <div class="Top">
+        <a href="/html/User.html">
+            <button class="Voltar">
+                <img src="/img/assets/setacima.svg">
+                <p>Voltar</p>
+            </button>
+        </a>
+        <div class="UserPicture">
+            <img src="/img/UserPictures/PlaceHolderUserPicture.png" height="100px">
+            <img src="/img/assets/lapiseditar.svg" height="20px">
+        </div>
+        <div class="UserEmail_Name">
+            <p>hugo_foletto@estudante.sesisenai.org.br</p>
+            <p>Hugo Weiler Foletto</p>
+        </div>
+        <button class="EditarBotao">
+            <p>Editar Informações</p>
+        </button>
+    </div>
+    <div class="Bottom">
+        <div class="Divisoes SessaoDiv">
+            <div class="Centralizar Sessao">
+                <h1>Notificações</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="Divisoes">
+            <div class="Centralizar">
+                <label class="Notificacoes">
+                    <h2>Receber Notificações</h2>
+                    <input type="checkbox">
+                </label>
+                <hr>
+                <div class="TiposNotificacoes">
+                    <label class="Notificacoes Tipos">
+                        <p>Alertas</p>
+                        <input type="checkbox" checked onclick="return false">
+                    </label>
+                    <label class="Notificacoes Tipos">
+                        <p>Promoções</p>
+                        <input type="checkbox" checked>
+                    </label>
+                    <label class="Notificacoes Tipos">
+                        <p>Mais Comprados</p>
+                        <input type="checkbox" checked>
+                    </label>
+                    <label class="Notificacoes Tipos">
+                        <p>Finalização de pedidos</p>
+                        <input type="checkbox" checked>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="Divisoes">
+                <div class="Centralizar BotaoWrapper">
+                <button class="BotaoSalvar" onclick="salvarconfiguracao(this)">
+                    <p>Salvar Configurações</p>
+                    <img src="/img/assets/OKicone.svg">
+                </button>
+            </div>
+        </div>
+        <script>
+            function salvarconfiguracao(element){
+                const imagem = element.querySelector('img');
+                const texto = element.querySelector('p');
+                texto.innerHTML = 'Salvo!';
+                imagem.style.display = 'block';
+            }
+        </script>
+    </div>
+</body>
+</html>

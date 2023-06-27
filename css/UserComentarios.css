@@ -4,4 +4,64 @@
 .Centralizar{
     height: 100px;
     cursor: default;
+    justify-content: space-around;
+}
+.ImagemProduto{
+    width: 13%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ImagemProduto>img{
+    max-width: 95%;
+    max-height: 95%;
+}
+.Comentario{
+    width: 54%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 100px;
+    overflow: auto;
+}
+.Comentario>a{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-text-fill-color: black;
+}
+.Arquivos{
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Arquivos>h2{
+    font-size: 20px;
+    width: 85px;
+    margin-bottom: 5px;
+}
+.BotaoArquivos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    width: 95%;
+    height: 20px;
+}
+.BotaoArquivos>div{
+    display: flex;
+    gap: 5px;
+}
+.BotaoArquivos>img{
+    height: 95%;
+}
+.Data{
+    width: 20%;
+}
+.Data>h2{
+    font-size: 20px;
+    margin-bottom: 5px;
 }

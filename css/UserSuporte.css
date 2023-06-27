@@ -1,0 +1,43 @@
+.Divisoes, .Centralizar{
+    height: fit-content;
+}
+.Centralizar{
+    height: 400px;
+    flex-direction: column;
+    cursor: default;
+}
+.Assuntos{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Tipos{
+    margin-left: 20px;
+    height: 50%;
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.Assunto{
+    margin-right: 15px;
+    height: 30%;
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-left: 10px;
+}
+.Texto{
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Texto>textarea{
+    resize: none;
+    width: 90%;
+    height: 95%;
+}
