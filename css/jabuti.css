@@ -278,3 +278,35 @@ font-weight: normal;
   margin-left: 90px;
   font-size: 40px;
 }
+.caractproduct{
+  margin-left: 20px;
+}
+.AvaliaClient{
+  margin-left: 20px;
+}
+.AvaliaClientText{
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-top: 5px;
+  gap: 20px;
+}
+.Avalia1{
+  color: gray;
+  font-weight: bold;
+  font-size: 13px;
+}
+.Avalia2{
+  color: gray;
+  font-weight: bold;
+  font-size: 13px;
+}
+.ComentTextt{
+  margin-left: 20px;
+}
+.OrganizComent{
+  width: 30%;
+  height: 200px;
+  background-color: #67b3b9;
+  margin-left: 20px;
+}
