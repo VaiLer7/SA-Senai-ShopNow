@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/UserCookies.css">
     <link rel="stylesheet" href="/css/User.css">
     <link rel="stylesheet" href="/css/UserSuporte.css">
 </head>
@@ -28,13 +29,25 @@
         </button>
     </div>
     <div class="Bottom">
+        <div class="Divisoes SessaoDiv">
+            <div class="Centralizar Sessao">
+                <h1>Suporte</h1>
+            </div>
+            <hr>
+        </div>
         <div class="Divisoes">
             <div class="Centralizar">
                 <div class="Assuntos">
-                    <button class="Tipos">
+                    <button class="Tipos" onclick="abrirmenu()">
                         <p>Escolher</p>
-                        <div class="TiposOculto" style="display: none;"></div>
                     </button>
+                    <div class="TiposOculto">
+                        <button onclick="escolherproblema(this)">Pruduto</button>
+                        <button onclick="escolherproblema(this)">Serviço</button>
+                        <button onclick="escolherproblema(this)">Site</button>
+                        <button onclick="escolherproblema(this)">Entrega</button>
+                        <button onclick="escolherproblema(this)">Outros</button>
+                    </div>
                     <input type="text"  placeholder="Assunto do Problema" class="Assunto">
                 </div>
                 <div class="Texto">
@@ -42,10 +55,36 @@
                 </div>
                 <div class="Anexar_Submit">
                     <input type="file">
-                    <input type="submit">
+                    <button class="BotaoSalvar" onclick="salvarconfiguracao(this)">
+                        <p>Enviar</p>
+                        <img src="/img/assets/OKicone.svg">
+                    </button>
                 </div>
             </div>
         </div>
+        <script>
+            function abrirmenu(){
+                const menu = document.querySelector('.TiposOculto')
+                if(menu.style.display != 'flex'){
+                    menu.style.display = 'flex';
+                }else{
+                    menu.style.display = 'none';
+                }
+            }
+
+            function escolherproblema(element){
+                var ProblemasInner = element;
+                var EscolhidoInner = document.querySelector('.Tipos>p');
+                EscolhidoInner.innerHTML = ProblemasInner.innerHTML;
+            }
+
+            function salvarconfiguracao(element){
+                const imagem = element.querySelector('img');
+                const texto = element.querySelector('p');
+                texto.innerHTML = 'Enviado!';
+                imagem.style.display = 'block';
+            }
+        </script>
     </div>
 </body>
 </html>

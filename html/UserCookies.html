@@ -113,7 +113,7 @@
             </div>
         </div>
         <div class="Divisoes">
-                <div class="Centralizar BotaoWrapper">
+            <div class="Centralizar BotaoWrapper">
                 <button class="BotaoSalvar" onclick="salvarconfiguracao(this)">
                     <p>Salvar Configurações</p>
                     <img src="/img/assets/OKicone.svg">
@@ -135,14 +135,14 @@
                 var induvidual = element.closest('.SecaoCookies');
                 var img = element.querySelector('img');
 
-                    if (img.style.transform != 'rotate(180deg)') {
-                        induvidual.style.maxHeight = 'fit-content';
-                        img.style.transform = "rotate(180deg)";
-                    } else {
-                        induvidual.style.maxHeight = '35px';
-                        img.style.transform = "rotate(0)";
-                    }
+                if (img.style.transform != 'rotate(180deg)') {
+                    induvidual.style.maxHeight = 'fit-content';
+                    img.style.transform = "rotate(180deg)";
+                } else {
+                    induvidual.style.maxHeight = '35px';
+                    img.style.transform = "rotate(0)";
                 }
+            }
         </script>
     </div>
 </body>
