@@ -19,6 +19,8 @@ input:focus {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  z-index: 3;
 }
 
 .logopart {
@@ -48,8 +50,6 @@ input:focus {
   background-color: #80cad1;
   display: flex;
   justify-content: space-around;
-  position: fixed;
-  z-index: 3;
 }
 
 .Pesquisa {
@@ -145,7 +145,6 @@ input:focus {
   background-color: #b5dee1;
   display: flex;
   justify-content: space-around;
-  margin-top: 50px;
 }
 
 .MenuLateral {

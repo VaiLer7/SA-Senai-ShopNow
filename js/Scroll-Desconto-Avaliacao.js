@@ -77,3 +77,10 @@ function FuncaoVoltar(){
         behavior: 'smooth'
     });
 }
+function FuncaoDescer(){
+    var alturadodoc = document.documentElement.scrollHeight;
+    window.scrollTo({
+        top: alturadodoc,
+        behavior: 'smooth'
+    });
+}

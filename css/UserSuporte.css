@@ -21,6 +21,10 @@
     border: 1px solid black;
     border-radius: 20px;
     cursor: pointer;
+    background-color: lightgray;
+}
+.Tipos:hover{
+    background-color: grey
 }
 .TiposOculto{
     display: none;
