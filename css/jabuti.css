@@ -307,6 +307,10 @@ font-weight: normal;
 .OrganizComent{
   width: 30%;
   height: 200px;
-  background-color: #67b3b9;
+  background-color:rgb(206, 233, 236);
   margin-left: 20px;
+}
+.Organizar1Text{
+  font-size: 18px;
+  margin-bottom: 10px;
 }
