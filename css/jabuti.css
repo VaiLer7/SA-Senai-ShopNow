@@ -306,11 +306,28 @@ font-weight: normal;
 }
 .OrganizComent{
   width: 30%;
-  height: 200px;
+  height: 150px;
   background-color:rgb(206, 233, 236);
   margin-left: 20px;
 }
 .Organizar1Text{
   font-size: 18px;
   margin-bottom: 10px;
+}
+.LinhaComent{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-color: gray;
+}
+.FatherComenti{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.BoxComent{
+width: 97%;
+height: 20%;
+background-color: rgb(206, 233, 236);
+display: flex;
 }
