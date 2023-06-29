@@ -7,6 +7,7 @@
     <title>ShopNow</title>
     <link rel="icon" type="image/png" href="/img/icone.png"/>
     <link rel="stylesheet" href="/css/jacare.css">
+    <link rel="stylesheet" href="/css/Politicas.css">
 </head>
 <body>
     <div id="id07" class="Propaganda">
@@ -522,7 +523,76 @@
         </div>
     </div>
     <div class="Torso">
-        
+        <div class="PoliticasInicio">
+            <div class="PoliticasTitulo">
+                <h1>Politicas de Privacidade</h1>
+                <hr>
+            </div>
+            <p>
+                Quando você realiza uma compra ou contrata um serviço no Magalu ou nas empresas do nosso grupo econômico, você nos fornece alguns dados pessoais com o objetivo de viabilizar a sua operação. O Magalu preza pela segurança dos seus dados, pelo respeito a sua privacidade e pela transparência com você e, por isso, dedicamos este documento para explicar como os seus dados pessoais serão tratados pelo Magalu e quais são as medidas que aplicamos para mantê-los seguros.
+            </p>
+            <p>
+                Antes de mais nada, nos apresentamos, nós somos o Magazine Luiza S/A, inscrito no CNPJ 47.960.950/0001-21, com sede na Cidade de Franca, Estado de São Paulo, na Rua Voluntários da Franca, 1.465, Centro, e segundo a definição trazida pela Lei Geral de Proteção de Dados “LGPD” (Lei Federal nº 13.709.2018), na maior parte do tempo seremos o controlador das suas informações, sendo assim, responsável por definir o que acontece com estes dados e por protegê-los.
+            </p>
+            <p>
+                Para facilitar a compreensão desta política, todas as vezes que encontrar os termos “Magalu”, “nós” ou “nossos”, estamos nos referindo ao controlador dos seus dados pessoais, ou seja, as empresas do Grupo Magazine Luiza ou simplesmente Grupo Magalu e, todas as vezes que ler “usuário”, “você”, “seu” ou “sua”, nos referimos a você, nosso cliente ou usuário das nossas plataformas.
+            </p>
+            <p>
+                Toda vez que mencionarmos o Grupo Magalu, estamos fazendo referência às nossas afiliadas, coligadas, controladas e controladoras. Você poderá acessar as empresas que compõem nosso grupo econômico no site de Relações com Investidores, por meio do link https://ri.magazineluiza.com.br.
+            </p>
+        </div>
+        <ul class="PoliticasWrappper">
+            <li class="PoliticasIndivudual">
+                <button class="PoliticasBotao" onclick="abrirpolitica(this)">
+                    <div class="PoliticasBotaoTexto">
+                        <p>Quais dados são coletados pelo grupo ShopNow</p>
+                        <img src="/img/assets/setacima.svg">
+                    </div>
+                    <hr>
+                    <div class="PoliticasHidden">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate molestiae possimus? Harum, eum minus amet ipsum ipsa reprehenderit culpa. Necessitatibus blanditiis nostrum distinctio recusandae quae cum quidem amet cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque ea asperiores aspernatur rem obcaecati temporibus nemo repellendus, nam optio porro veniam ab ut repellat at nobis, laboriosam pariatur cupiditate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A libero unde cum quasi cumque corrupti nulla illum consequatur quam vel. Ab, provident illo officiis velit recusandae molestiae vitae placeat sed?</p>
+                    </div>
+                </button>
+            </li>
+            <li class="PoliticasIndivudual">
+                <button class="PoliticasBotao" onclick="abrirpolitica(this)">
+                    <div class="PoliticasBotaoTexto">
+                        <p>Quais dados são coletados pelo grupo ShopNow</p>
+                        <img src="/img/assets/setacima.svg">
+                    </div>
+                    <hr>
+                    <div class="PoliticasHidden">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate molestiae possimus? Harum, eum minus amet ipsum ipsa reprehenderit culpa. Necessitatibus blanditiis nostrum distinctio recusandae quae cum quidem amet cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque ea asperiores aspernatur rem obcaecati temporibus nemo repellendus, nam optio porro veniam ab ut repellat at nobis, laboriosam pariatur cupiditate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A libero unde cum quasi cumque corrupti nulla illum consequatur quam vel. Ab, provident illo officiis velit recusandae molestiae vitae placeat sed?</p>
+                    </div>
+                </button>
+            </li>
+            <li class="PoliticasIndivudual">
+                <button class="PoliticasBotao" onclick="abrirpolitica(this)">
+                    <div class="PoliticasBotaoTexto">
+                        <p>Quais dados são coletados pelo grupo ShopNow</p>
+                        <img src="/img/assets/setacima.svg">
+                    </div>
+                    <hr>
+                    <div class="PoliticasHidden">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cupiditate molestiae possimus? Harum, eum minus amet ipsum ipsa reprehenderit culpa. Necessitatibus blanditiis nostrum distinctio recusandae quae cum quidem amet cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque ea asperiores aspernatur rem obcaecati temporibus nemo repellendus, nam optio porro veniam ab ut repellat at nobis, laboriosam pariatur cupiditate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. A libero unde cum quasi cumque corrupti nulla illum consequatur quam vel. Ab, provident illo officiis velit recusandae molestiae vitae placeat sed?</p>
+                    </div>
+                </button>
+            </li>
+        </ul>
+        <script>
+            function abrirpolitica(elemento){
+                const induvidual = elemento.querySelector('.PoliticasHidden');
+                const imgrotate = elemento.querySelector('.PoliticasBotaoTexto>img');
+
+                if(induvidual.style.fontSize != '15px'){
+                    imgrotate.style.rotate = '180deg';
+                    induvidual.style.fontSize = '15px';
+                }else{
+                    imgrotate.style.rotate = '0deg';
+                    induvidual.style.fontSize = '0';
+                }
+            }
+        </script>
     </div>
     <footer>
         <button class="VoltarFooter" onclick="FuncaoVoltar()">
