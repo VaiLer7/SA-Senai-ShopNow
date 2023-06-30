@@ -327,7 +327,55 @@ font-weight: normal;
 }
 .BoxComent{
 width: 97%;
-height: 20%;
+max-height: 190px;
+overflow: auto;
 background-color: rgb(206, 233, 236);
 display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.partedecimacoment{
+  display: flex;
+  justify-content: space-between;
+}
+.NameDate{
+  display: flex;
+  align-items:center;
+  gap: 20px;
+}
+.StarandText{
+  display: flex;
+}
+.MarginOgrCom{
+  margin-left: 10px;
+}
+.BoxComent::-webkit-scrollbar {
+  width: 5px;
+}
+
+.BoxComent::-webkit-scrollbar-track {
+  background: #6f95ac;
+}
+
+.BoxComent::-webkit-scrollbar-thumb {
+  background: #91a8b6;
+}
+
+.BoxComent::-webkit-scrollbar-thumb:hover {
+  background: #8498a5;
+}
+.ReportUtil{
+  display: flex;
+  justify-content: space-between;
+}
+.CheckUtil{
+  display: flex;
+  gap: 5px;
+}
+.elzaFronze{
+  display: flex;
+}
+.ReportCom{
+  text-decoration: none;
+  color: gray;
 }
