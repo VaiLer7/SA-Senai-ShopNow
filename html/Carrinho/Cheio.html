@@ -10,6 +10,48 @@
     <link rel="stylesheet" href="/css/style3.css">
 </head>
 <body>
+    <div id="id08" class="TudoPopUp">
+        <form class="PopUp fade2">
+            <div class="PopUpSuperior CoisasDoCEP">
+                <h1 style="font-size: 23px;">Calcular Valor do Frete</h1>
+                <hr>
+                <div class="CepDigitado">
+                    <p>CEP Digitado:</p>
+                    <div class="CepInput">
+                        <img src="/img/assets/localizacaosimbolo.svg">
+                        <input type="text">
+                        <button><p>Alterar CEP</p></button>
+                    </div>
+                    <p>Brasil, Santa Catarina, Joinville, Saguaçu, Rua José do Patrocínio, 663, Apartamento 304Joinville, Saguaçu, Rua José do Patrocínio, 663, Apartamento 304</p>
+                </div>
+                <hr>
+            </div>
+            <div class="PopUpTorso">
+                <label><b>E-mail:</b></label>
+                <input type="text" placeholder="Coloque seu E-mail:">
+                <button type="button" id="ng72sd2">
+                    <p style="margin: 0;">Enviar</p>
+                    <img src="/img/assets/enviar.svg" height="20px">
+                </button>
+                <br>
+                <label><b>Código:</b></label>
+                <input type="text" placeholder="Insira o código recebido:">
+                <br>
+                <div class="PopUpAvisos">
+                    <p>Verifique se o código está escrito correto no campo!</p>
+                </div>
+            </div>
+            <div class="PopUpInferior">
+                <div>
+                    <button type="button" onclick="document.getElementById('id03').style.display='none', document.getElementById('id04').style.display='block'">
+                        <p style="margin: 0;">Continuar</p>
+                        <img src="/img/assets/enviar.svg" height="40px">
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
     <!-- <div id="id07" class="Propaganda">
         <div class="PropagandaCima">
             <button onclick="PropagandaFechar()">
@@ -639,14 +681,22 @@
                             <b>Frete: </b><p>Não-Calculado</p>
                         </div>
                         <input type="text">
-                        <button></button>
+                        <button onclick="document.getElementById('id08').style.display = 'block';">Calcular</button>
                     </div>
-                    <div class="CupomCarrinho"></div>
+                    <div class="CupomCarrinho">
+                        <div>
+                            <p>Cupom: Inexistente</p>
+                        </div>
+                        <input type="text">
+                        <button>Aplicar Cupom</button>
+                    </div>
                     <div class="ComprarCarrinho">
-                        <!-- <button class="BotaoItemComprar">
-                            <p>COMPRAR</p>
-                            <img src="/img/assets/enviar.svg">
-                        </button> -->
+                        <div class="BotaoComprarAlinhar">
+                            <button class="BotaoItemComprar">
+                                <p>COMPRAR</p>
+                                <img src="/img/assets/carrinho.svg">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
