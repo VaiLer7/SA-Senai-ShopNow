@@ -21,6 +21,7 @@ input:focus {
   flex-direction: column;
   position: fixed;
   z-index: 3;
+  margin-top: -75px;
 }
 
 .logopart {
@@ -1592,39 +1593,10 @@ footer>hr {
 }
 
 .Propaganda{
-  height: 300px;
-  width: 300px;
   position: fixed;
   z-index: 1;
   bottom: 20px;
   right: 20px;
-  background-color: whitesmoke;
-  border-radius: 15px;
-  box-shadow: 0 0 10px grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.PropagandaCima{
-  height: 10%;
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-.PropagandaCima>button{
-  width: fit-content;
-  height: 40%;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border: none;
-}
-.PropagandaCima>button>img{
-  height: 100%;
 }
 .PropagandaMeio{
   height: 90%;
@@ -1634,8 +1606,27 @@ footer>hr {
   align-items: center;
   justify-content: center;
 }
+.PropagandaMeio>button{
+  position: absolute;
+  top: 8.5px;
+  right: 18.5px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background-color:  rgb(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+.PropagandaMeio>button>img{
+  height: 95%;
+  width: 95%;
+}
 .PropagandaMeio>img{
   max-height: 90%;
   max-width: 90%;
   margin: 5px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px grey;
+  cursor: pointer;
 }

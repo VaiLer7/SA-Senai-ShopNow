@@ -21,7 +21,7 @@
     position: relative;
     z-index: 0;
     bottom: 35px;
-    width: 90%;
+    width: 100%;
     border: none;
     border-top: 1px solid black;
 }
@@ -45,7 +45,7 @@
     width: 90%;
     border-radius: 15px;
     background-color: lightgray;
-    padding: 4px;
+    padding: 4px 4px 14px 4px;
 }
 .PoliticasIndivudual{
     width: 100%;
@@ -66,7 +66,7 @@
     margin: 0;
     border: none;
     border-top: 1px solid black;
-    width: calc(99% + 10px);
+    width: calc(100% + 8px);
 }
 .PoliticasBotaoTexto{
     display: flex;

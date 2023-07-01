@@ -11,41 +11,85 @@
 </head>
 <body>
     <div id="id08" class="TudoPopUp">
-        <form class="PopUp fade2">
+        <form class="PopUp FreteScroll fade2">
             <div class="PopUpSuperior CoisasDoCEP">
                 <h1 style="font-size: 23px;">Calcular Valor do Frete</h1>
                 <hr>
                 <div class="CepDigitado">
-                    <p>CEP Digitado:</p>
+                    <h2>CEP Digitado:</h2>
                     <div class="CepInput">
                         <img src="/img/assets/localizacaosimbolo.svg">
                         <input type="text">
-                        <button><p>Alterar CEP</p></button>
+                        <button onclick="event.preventDefault()"><p>Alterar CEP</p></button>
                     </div>
-                    <p>Brasil, Santa Catarina, Joinville, Saguaçu, Rua José do Patrocínio, 663, Apartamento 304Joinville, Saguaçu, Rua José do Patrocínio, 663, Apartamento 304</p>
+                    <p>Brasil, Santa Catarina, Joinville, Saguaçu, Rua José do Patrocínio, 663, Apartamento 304</p>
                 </div>
                 <hr>
             </div>
-            <div class="PopUpTorso">
-                <label><b>E-mail:</b></label>
-                <input type="text" placeholder="Coloque seu E-mail:">
-                <button type="button" id="ng72sd2">
-                    <p style="margin: 0;">Enviar</p>
-                    <img src="/img/assets/enviar.svg" height="20px">
-                </button>
-                <br>
-                <label><b>Código:</b></label>
-                <input type="text" placeholder="Insira o código recebido:">
-                <br>
-                <div class="PopUpAvisos">
-                    <p>Verifique se o código está escrito correto no campo!</p>
+            <div class="PopUpTorso FreteTorso1">
+                <div class="FreteTorso2">
+                    <h2>Entrega:</h2>
+                    <label class="EntregaWrapper">
+                        <div class="EntregaInputNomeDia">
+                            <input type="radio" name="radioentrega" value="FastTravel">
+                            <div class="EntregaNomeDia">
+                                <b>FastTravel</b>
+                                <p>3 dias úteis</p>
+                            </div>
+                        </div>
+                            <p>R$ 28,53</p>
+                    </label>
+                    <label class="EntregaWrapper">
+                        <div class="EntregaInputNomeDia">
+                            <input type="radio" name="radioentrega" value="Correios">
+                            <div class="EntregaNomeDia">
+                                <b>Correios</b>
+                                <p>4 dias úteis</p>
+                            </div>
+                        </div>
+                        <p>R$ 21,78</p>
+                    </label>
+                    <label class="EntregaWrapper">
+                        <div class="EntregaInputNomeDia">
+                            <input type="radio" name="radioentrega" value="Sedex">
+                            <div class="EntregaNomeDia">
+                                <b>Sedex</b>
+                                <p>5 dias úteis</p>
+                            </div>
+                        </div>
+                        <p>R$ 17,98</p>
+                    </label>
+                    <label class="EntregaWrapper">
+                        <div class="EntregaInputNomeDia">
+                            <input type="radio" name="radioentrega" value="Brexpress">
+                            <div class="EntregaNomeDia">
+                                <b>Brexpress</b>
+                                <p>7 dias úteis</p>
+                            </div>
+                        </div>
+                        <p>R$ 15,21</p>
+                    </label>
+                </div>
+                <hr>
+                <div class="FreteTorso2">
+                    <h2>Entrega:</h2>
+                    <label class="EntregaWrapper">
+                        <div class="EntregaInputNomeDia">
+                            <input type="radio" name="radioentrega" value="Retirada">
+                            <div class="EntregaNomeDia">
+                                <b>Loja Física SHOPNOW</b>
+                                <p>7 dias úteis</p>
+                            </div>
+                        </div>
+                        <p>R$ 8,22</p>
+                    </label>
                 </div>
             </div>
-            <div class="PopUpInferior">
+            <div class="PopUpInferior FreteInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id03').style.display='none', document.getElementById('id04').style.display='block'">
-                        <p style="margin: 0;">Continuar</p>
-                        <img src="/img/assets/enviar.svg" height="40px">
+                    <button type="button" onclick="document.getElementById('id08').style.display='none'">
+                        <p style="margin: 0;">Definir</p>
+                        <img src="/img/assets/localizacaosimbolo.svg" height="40px">
                     </button>
                 </div>
             </div>
@@ -418,12 +462,17 @@
             </div>
         </form>
         <script>
-            var TudoLogin = document.getElementById('id01');
-            window.onclick = function(event) {
-                if (event.target == TudoLogin) {
-                    TudoLogin.style.display = "none";
-                }
-            }
+        function hideElementOnClick(elementId) {
+            var element = document.getElementById(elementId);
+            element.addEventListener('click', function(event) {
+              element.style.display = "none";
+            });
+          }
+          
+          var elementIds = ['id01', 'id02', 'id03', 'id04', 'id08'];
+          for (var i = 0; i < elementIds.length; i++) {
+            hideElementOnClick(elementIds[i]);
+          }
         </script>
     </div>
 
@@ -454,7 +503,7 @@
                     <strong class="MenuTexto">Sobre Nós</strong>
                 </button>
             </a>
-            <a class="AMenuBotoes" href="/politicas-e-informacoes">
+            <a class="AMenuBotoes" href="/html/Politicas.html">
                 <button class="MenuBotoes">
                     <img class="MenuImagem" src="/img/assets/políticas-e-informações.svg" height="40px">
                     <strong class="MenuTexto">Políticas e<br> Informações</strong>
@@ -560,9 +609,9 @@
             </div>
         </div>
     </div>
-    <br>
     <div class="Torso">
         <div class="Produtos">
+            <br>
             <div class="SeparadorProdutos">
                 <hr>
                 <h1>CARRINHO</h1>
