@@ -656,10 +656,27 @@
                                 </button></a>
                         </div>
                         <div class="ButtonAddProduct">
-                            <a href="/levarcarrinho">
-                                <button class="GiveCarrinhoo">
+                                        <button class="GiveCarrinhoo" onclick="document.getElementById('id65').style.display='block', event.preventDefault()">
                                     <p class="GiveCarrinho">LEVAR AO CARRINHO</p>
-                                </button></a>
+                                </button>
+                        </div>
+
+                        <div id="id65" class="TudoPopUp">
+                            <form class="PopUp fade2">
+                                <div class="PopUpSuperior">
+                                    <p>Levar ao Carrinho</p>
+                                    <button onclick="document.getElementById('id65').style.display='none'">
+                                        <img src="/img/assets/Xfechar.svg" height="30px">
+                                    </button>
+                                </div>
+                                <div class="PopUpTorso">
+                                    <p>Quantas unidades deseja adicionar ao carrinho?</p>
+                            
+                                </div>
+                                    <div class="PopUpInferior">
+                                        
+                                    </div>
+                            </form>
                         </div>
 
                     </div>
@@ -799,17 +816,166 @@
                     <input type="radio" name="pinto" value="Nao">Não
                 </div>
             </div>
-                <a href="">
-                    <p class="ReportCom">!Reportar Comentário</p>
-                </a>
-            </div>
+            <a onclick="document.getElementById('id69').style.display='block', event.preventDefault()">
+                <p class="ReportCom">!Reportar Comentário</p>
+            </a>
         </div>
     </div>
+</div>
 
 
+<div id="id69" class="TudoPopUp">
+    <form class="PopUp fade2">
+        <div class="PopUpSuperior">
+            <p>Reportar Comentário</p>
+            <button onclick="document.getElementById('id69').style.display='none'">
+                <img src="/img/assets/Xfechar.svg" height="30px">
+            </button>
+        </div>
+        <div class="PopUpTorso">
+            <select>
+                <option>Discurso de Ódio ou violencia explícita</option>
+                <option>Material com conteúdo sexual</option>
+                <option>Promove terrorismo</option>
+                <option>Assédio ou Bullying</option>
+                <option>Desinformação</option>
+                <option>Spam</option>
+            </select>
+            <div class="ObservReport">
+                <b><p>Observações:</p></b>
+                    <textarea></textarea>
+            </div>
+        </div>
+            <div class="PopUpInferior">
+                <div>
+                    <button onclick="document.getElementById('id68').style.display='block', event.preventDefault(), document.getElementById('id69').style.display='none'">
+                        <p style="margin: 0;">Enviar</p>
+                        <img src="/img/assets/enviar.svg" height="40px">
+                    </button>
+                </div>
+            </div>
+    </form>
+</div>
 
 
+<div id="id68" class="TudoPopUp">
+    <form class="PopUp fade2">
+        <div class="PopUpSuperior">
+            <p>Reportar Comentário</p>
+            <button onclick="document.getElementById('id68').style.display='none', event.preventDefault()">
+                <img src="/img/assets/Xfechar.svg" height="30px">
+            </button>
+        </div>
+        <div class="PopUpTorso">
+            <p>Denuncia enviada com sucesso!</p>
+        </div>
+          
+                
+           
+    </form>
+</div>
 
+<div class="FatherComenti">
+    <div class="BoxComent">
+        <div class="partedecimacoment">
+            <div class="NameDate">
+                <div class="NomeComent">
+                    <h2>Augusto Quente</h2>
+                </div>
+                <div class="DataComent">
+                    <p>27/06/2023</p>
+                </div>
+            </div>
+            <div class="StarandText">
+                <div class="AvaCamarela">
+                    <h3>Avaliação:</h3>
+                </div>
+                <div class="ComenttStarsAvali">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZNJREFUSEu1lYExxVAQRc+vABWgAlSAClABKkAFqAAVoAI6QAdUQAeogDlm989L5EWCvzOZn8nP3Hv3vrubCTOuyYzxGUvwCHwAa0OFjSHYAy4DeB+4GkIyhuAeWA9Q7zf/k2ADuAPeA3QuCCTqraEd3AJbwGmgHQPXgLb9mWAJeA6Uhfh9jd9l4KWPoexgG1gBBPSy5oHVuC8Ve8C78dxkvcW9ZF5PgF03Ymr8aqX3EqVaBQjsWdTqS3zZQRlD1apSZQL1lcR2eh4O+O40xu1D/k3WBT+LA7fTw3JGulJUktiFamoluPG1C8GNc6PjWkxLkqNov4tEMIPRCd4+gzaAnh5E9k8qLXjoi31D1zdouRp2MnIdJBnXapd9BBlbh8s06XO57LTH2bkBHsL/bxpqBLl7HBiBtcj1UJbPLoCc6hTSeKlGYNSMXiYip7ncRQL5v0ly8DqtrBHkcks1dmKySkL9N0FZncuvRqDnuQZUXUtRaZ2JcvkNsiiVlqprw6Z9+XVLK6fvDv0e/LCO6n/PnOATq2BVGYMGXfgAAAAASUVORK5CYII="
+                        alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZNJREFUSEu1lYExxVAQRc+vABWgAlSAClABKkAFqAAVoAI6QAdUQAeogDlm989L5EWCvzOZn8nP3Hv3vrubCTOuyYzxGUvwCHwAa0OFjSHYAy4DeB+4GkIyhuAeWA9Q7zf/k2ADuAPeA3QuCCTqraEd3AJbwGmgHQPXgLb9mWAJeA6Uhfh9jd9l4KWPoexgG1gBBPSy5oHVuC8Ve8C78dxkvcW9ZF5PgF03Ymr8aqX3EqVaBQjsWdTqS3zZQRlD1apSZQL1lcR2eh4O+O40xu1D/k3WBT+LA7fTw3JGulJUktiFamoluPG1C8GNc6PjWkxLkqNov4tEMIPRCd4+gzaAnh5E9k8qLXjoi31D1zdouRp2MnIdJBnXapd9BBlbh8s06XO57LTH2bkBHsL/bxpqBLl7HBiBtcj1UJbPLoCc6hTSeKlGYNSMXiYip7ncRQL5v0ly8DqtrBHkcks1dmKySkL9N0FZncuvRqDnuQZUXUtRaZ2JcvkNsiiVlqprw6Z9+XVLK6fvDv0e/LCO6n/PnOATq2BVGYMGXfgAAAAASUVORK5CYII="
+                        alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZNJREFUSEu1lYExxVAQRc+vABWgAlSAClABKkAFqAAVoAI6QAdUQAeogDlm989L5EWCvzOZn8nP3Hv3vrubCTOuyYzxGUvwCHwAa0OFjSHYAy4DeB+4GkIyhuAeWA9Q7zf/k2ADuAPeA3QuCCTqraEd3AJbwGmgHQPXgLb9mWAJeA6Uhfh9jd9l4KWPoexgG1gBBPSy5oHVuC8Ve8C78dxkvcW9ZF5PgF03Ymr8aqX3EqVaBQjsWdTqS3zZQRlD1apSZQL1lcR2eh4O+O40xu1D/k3WBT+LA7fTw3JGulJUktiFamoluPG1C8GNc6PjWkxLkqNov4tEMIPRCd4+gzaAnh5E9k8qLXjoi31D1zdouRp2MnIdJBnXapd9BBlbh8s06XO57LTH2bkBHsL/bxpqBLl7HBiBtcj1UJbPLoCc6hTSeKlGYNSMXiYip7ncRQL5v0ly8DqtrBHkcks1dmKySkL9N0FZncuvRqDnuQZUXUtRaZ2JcvkNsiiVlqprw6Z9+XVLK6fvDv0e/LCO6n/PnOATq2BVGYMGXfgAAAAASUVORK5CYII="
+                        alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZNJREFUSEu1lYExxVAQRc+vABWgAlSAClABKkAFqAAVoAI6QAdUQAeogDlm989L5EWCvzOZn8nP3Hv3vrubCTOuyYzxGUvwCHwAa0OFjSHYAy4DeB+4GkIyhuAeWA9Q7zf/k2ADuAPeA3QuCCTqraEd3AJbwGmgHQPXgLb9mWAJeA6Uhfh9jd9l4KWPoexgG1gBBPSy5oHVuC8Ve8C78dxkvcW9ZF5PgF03Ymr8aqX3EqVaBQjsWdTqS3zZQRlD1apSZQL1lcR2eh4O+O40xu1D/k3WBT+LA7fTw3JGulJUktiFamoluPG1C8GNc6PjWkxLkqNov4tEMIPRCd4+gzaAnh5E9k8qLXjoi31D1zdouRp2MnIdJBnXapd9BBlbh8s06XO57LTH2bkBHsL/bxpqBLl7HBiBtcj1UJbPLoCc6hTSeKlGYNSMXiYip7ncRQL5v0ly8DqtrBHkcks1dmKySkL9N0FZncuvRqDnuQZUXUtRaZ2JcvkNsiiVlqprw6Z9+XVLK6fvDv0e/LCO6n/PnOATq2BVGYMGXfgAAAAASUVORK5CYII="
+                        alt="">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZNJREFUSEu1lYExxVAQRc+vABWgAlSAClABKkAFqAAVoAI6QAdUQAeogDlm989L5EWCvzOZn8nP3Hv3vrubCTOuyYzxGUvwCHwAa0OFjSHYAy4DeB+4GkIyhuAeWA9Q7zf/k2ADuAPeA3QuCCTqraEd3AJbwGmgHQPXgLb9mWAJeA6Uhfh9jd9l4KWPoexgG1gBBPSy5oHVuC8Ve8C78dxkvcW9ZF5PgF03Ymr8aqX3EqVaBQjsWdTqS3zZQRlD1apSZQL1lcR2eh4O+O40xu1D/k3WBT+LA7fTw3JGulJUktiFamoluPG1C8GNc6PjWkxLkqNov4tEMIPRCd4+gzaAnh5E9k8qLXjoi31D1zdouRp2MnIdJBnXapd9BBlbh8s06XO57LTH2bkBHsL/bxpqBLl7HBiBtcj1UJbPLoCc6hTSeKlGYNSMXiYip7ncRQL5v0ly8DqtrBHkcks1dmKySkL9N0FZncuvRqDnuQZUXUtRaZ2JcvkNsiiVlqprw6Z9+XVLK6fvDv0e/LCO6n/PnOATq2BVGYMGXfgAAAAASUVORK5CYII="
+                        alt="">
+                </div>
+            </div>
+        </div>
+        <div class="AgoraeComent">
+            <p>Phasellus dapibus dolor urna, vel pretium ipsum rutrum ornare. Phasellus in neque ut leo porttitor
+                egestas id ac leo. Ut interdum laoreet dign Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorum mollitia autem rerum ab molestiae. Explicabo repudiandae officia reiciendis deleniti voluptatem at consequatur, doloremque eligendi similique veniam rerum harum numquam. issim. In in quam laoreet, malesuada urna eget,
+        </div>
+        <div class="ReportUtil">
+            <div class="elzaFronze">
+            <div class="UtilText">
+                <b><p>Esse Comentário foi Útil?</p></b>
+            </div>
+            <div class="CheckUtil">
+                <input type="radio" name="pinto" value="Sim">Sim
+                <input type="radio" name="pinto" value="Nao">Não
+            </div>
+        </div>
+        <a onclick="document.getElementById('id69').style.display='block', event.preventDefault()">
+            <p class="ReportCom">!Reportar Comentário</p>
+        </a>
+    </div>
+</div>
+</div>
+
+
+<div id="id69" class="TudoPopUp">
+<form class="PopUp fade2">
+    <div class="PopUpSuperior">
+        <p>Reportar Comentário</p>
+        <button onclick="document.getElementById('id69').style.display='none', event.preventDefault()">
+            <img src="/img/assets/Xfechar.svg" height="30px">
+        </button>
+    </div>
+    <div class="PopUpTorso">
+        <select>
+            <option>Discurso de Ódio ou violencia explícita</option>
+            <option>Material com conteúdo sexual</option>
+            <option>Promove terrorismo</option>
+            <option>Assédio ou Bullying</option>
+            <option>Desinformação</option>
+            <option>Spam</option>
+        </select>
+        <div class="ObservReport">
+            <b><p>Observações:</p></b>
+                <textarea></textarea>
+        </div>
+    </div>
+        <div class="PopUpInferior">
+            <div>
+                <button onclick="document.getElementById('id68').style.display='block', event.preventDefault(), document.getElementById('id69').style.display='none'">
+                    <p style="margin: 0;">Enviar</p>
+                    <img src="/img/assets/enviar.svg" height="40px">
+                </button>
+            </div>
+        </div>
+</form>
+</div>
+
+
+<div id="id68" class="TudoPopUp">
+<form class="PopUp fade2">
+    <div class="PopUpSuperior">
+        <p>Reportar Comentário</p>
+        <button onclick="document.getElementById('id68').style.display='none', event.preventDefault()">
+            <img src="/img/assets/Xfechar.svg" height="30px">
+        </button>
+    </div>
+    <div class="PopUpTorso">
+        <p>Denuncia enviada com sucesso!</p>
+    </div>
+      
+            
+       
+</form>
+</div>
 
 
 

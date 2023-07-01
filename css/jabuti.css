@@ -327,6 +327,7 @@ font-weight: normal;
   height: fit-content;
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 .BoxComent{
 width: 97%;
@@ -381,4 +382,16 @@ gap: 20px;
 .ReportCom{
   text-decoration: none;
   color: gray;
+  cursor: pointer;
+}
+.ObservReport{
+  margin-top: 10px;
+}
+.ObservReport>textarea{
+  resize: none;
+  width: 93.5%;
+  height: 100px;
+}
+.PopUpTorso>select{
+  width: 95%;
 }
