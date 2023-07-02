@@ -520,7 +520,7 @@
         <div class="CabecalhoPrincipal">
             <div class="logopart">
                 <img src="/img/assets/LinhaLogo.svg">
-                <a class="Logo" href="/">APP.SHOPNOW.COM</a>
+                <a class="Logo" href="/html/Home.html">APP.SHOPNOW.COM</a>
             </div>
             <div class="Pesquisa">
                 <input class="BarraBuscar" type="text" name="txtsearch" placeholder="Buscar" noshade>
@@ -665,16 +665,38 @@
                             <form class="PopUp fade2">
                                 <div class="PopUpSuperior">
                                     <p>Levar ao Carrinho</p>
-                                    <button onclick="document.getElementById('id65').style.display='none'">
+                                    <button onclick="document.getElementById('id65').style.display='none', event.preventDefault()">
                                         <img src="/img/assets/Xfechar.svg" height="30px">
                                     </button>
                                 </div>
                                 <div class="PopUpTorso">
-                                    <p>Quantass unidades deseja adicionar ao carrinho?</p>
+                                    <p class="popuptext">Quantas unidades deseja adicionar ao carrinho?</p>
+                                    <div class="QuantiProduct">
+                                        <button class="menosbu" onclick="funcaosomasub(this, -1), event.preventDefault()">
+                                        <img src="/img/assets/Menos.svg" height="15px">
+                                        </button>
+                                        <p class="textquantiforprodu" id="somasub">1</p>
+                                        <button class="maisbu" onclick="funcaosomasub(this, 1), event.preventDefault()">
+                                        <img src="/img/assets/Mais.svg" height="15px">
+                                        </button>
+                                    </div>
                             
                                 </div>
+                                <script>
+                                    function funcaosomasub(element, x) {
+                                        const local = element.closest('.QuantiProduct');
+                                        var texto = local.querySelector('p');
+                                        var StringToNum = parseInt(texto.innerHTML);
+                                        var Resultado = StringToNum + x;
+                                        if(Resultado<1){
+                                            window.alert('Rapaz, ta certo isso?');
+                                        }else{
+                                            texto.innerHTML = Resultado;
+                                        }
+                                    }
+                                </script>
                                     <div class="PopUpInferior">
-                                        
+                                        <button class="AddProd">ADICIONAR</button>
                                     </div>
                             </form>
                         </div>
@@ -914,7 +936,7 @@
                 <b><p>Esse Comentário foi Útil?</p></b>
             </div>
             <div class="CheckUtil">
-                <input type="radio" name="pinto" value="Sim">Sim
+                <input type="radio" name="pinto" value="Sim" onclick="">Sim
                 <input type="radio" name="pinto" value="Nao">Não
             </div>
         </div>
