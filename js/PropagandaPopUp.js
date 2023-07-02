@@ -1,11 +1,10 @@
-function PropagandaFechar(){
-    const propaganda = document.getElementById('id07').style;
-
-    propaganda.display = 'none';
-    m=60000;
-    setTimeout(AbrirPropaganda, 10*m);
-
-    function AbrirPropaganda(){
-        propaganda.display = 'flex';
+function PropagandaFechar() {
+    const propaganda = document.getElementById('id07');
+  
+    propaganda.style.display = 'none';
+    setTimeout(AbrirPropaganda, 1000);
+  
+    function AbrirPropaganda() {
+        propaganda.style.display = 'flex';
     }
 }

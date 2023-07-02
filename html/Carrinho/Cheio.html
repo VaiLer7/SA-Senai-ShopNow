@@ -643,11 +643,11 @@
                             <hr>
                             <div class="ProdutoQtddxPreco">
                                 <div class="ProdutoQtdd">
-                                    <button>
+                                    <button onclick="funcaosomasub(this, -1)">
                                         <img src="/img/assets/Menos.svg">
                                     </button>
-                                    <p>1x</p>
-                                    <button>
+                                    <p id="somasub">1</p>
+                                    <button onclick="funcaosomasub(this, 1)">
                                         <img src="/img/assets/Mais.svg">
                                     </button>
                                 </div>
@@ -679,11 +679,11 @@
                             <hr>
                             <div class="ProdutoQtddxPreco">
                                 <div class="ProdutoQtdd">
-                                    <button>
+                                    <button onclick="funcaosomasub(this, -1)">
                                         <img src="/img/assets/Menos.svg">
                                     </button>
-                                    <p>1x</p>
-                                    <button>
+                                    <p>1</p>
+                                    <button onclick="funcaosomasub(this, 1)">
                                         <img src="/img/assets/Mais.svg">
                                     </button>
                                 </div>
@@ -703,6 +703,19 @@
                                 </div>
                             </div>
                         </div>
+                        <script>
+                            function funcaosomasub(element, x) {
+                                const local = element.closest('.ProdutoQtdd');
+                                var texto = local.querySelector('p');
+                                var StringToNum = parseInt(texto.innerHTML);
+                                var Resultado = StringToNum + x;
+                                if(Resultado<1){
+                                    window.alert('nao pode, coisa feia');
+                                }else{
+                                    texto.innerHTML = Resultado;
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
                 <div class="ItemEsquerdaCarrinhoCheio">
