@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow</title>
+    <link rel="icon" type="image/png" href="/img/icone.png" />
+    <link rel="stylesheet" href="/css/jacare.css">
+    <link rel="stylesheet" href="/css/jabuti.css">
+</head>
+
+<body>
+
+
+
+    <div class="Cabecalho margintopcabecalho">
+        <div class="CabecalhoPrincipal">
+            <div class="logopart">
+                <img src="/img/assets/LinhaLogo.svg">
+                <a class="Logo" href="/html/Home.html">APP.SHOPNOW.COM</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="Espacamento"></div>
+
+
+
+
+
+    <div class="FatherPag">
+        <div class="Pagamentis">
+            <div class="ProductMetPag">
+                <div class="LocationAdress">
+                    <h2 class="EndDeEntrega">Endereço de Entrega</h2>
+                    <div class="Adresssss">
+                        <div class="InfoAdress">
+                            <div class="Textadress">
+                                <b>
+                                    <p>Hugo Weiler Foleto</p>
+                                </b>
+                                <p>+55 47940028922</p>
+                            </div>
+                            <div class="InfoTextAdress">
+                                <p>SC, Joinville, Saguacu, Rua José do Patrocínio, 663, Apartamento 304 / undefined</p>
+                                <p>Joinville, Santa Catarina, Brazil, 89221-140</p>
+                            </div>
+                        </div>
+                        <div class="Butaun">
+                            <button class="Altebut">Mudar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="MetoduPAgamento">
+                    <h2 class="MetododDePaga">Métodos de Pagamento</h2>
+                    <div class="Card">
+                        <div class="InfoCard">
+                            <img src="/img/assets/download.png" width="30px">
+                            <p>260002********4329</p>
+                        </div>
+                        <div class="AlterarPAgamento">
+                            <button class="AlteBu">Alterar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="InfoProduPag">
+                    <h2 class="ParaisoStor">Danger Store</h2>
+                    <div class="EngoblandoInfoProdu">
+                        <div class="ImgAndFrete">
+                            <img class="imgProdutos" src="/img/imgProdutos/r1.png">
+                            <h3 class="h3frete">Frete Grátis</h3>
+                            <b>
+                                <p class="pfrete">Estimativa de Entrega: 23 de Jul</p>
+                            </b>
+                        </div>
+                        <div class="InfoTextProdutu">
+                            <p class="TextInfoProdu">Teclado Mecanico Redragon Kumara Wireless, RGB Switch Marrom, Branco, Azul K552RGB-BRS-W</p>
+                           <div class="PopupMeio">
+                            <div class="ValorproduQuantia">
+                                <p>R$369,90</p>
+                            </div>
+                            <div class="MaisMenosProdu">
+                                <button class="menosbu" onclick="funcaosomasub(this, -1), event.preventDefault()">
+                                    <img src="/img/assets/Menos.svg" height="15px">
+                                    </button>
+                                    <p class="textquantiforprodu" id="somasub">1</p>
+                                    <button class="maisbu" onclick="funcaosomasub(this, 1), event.preventDefault()">
+                                    <img src="/img/assets/Mais.svg" height="15px">
+                                    </button>
+                            </div>
+                        </div>
+                            <script>
+                                function funcaosomasub(element, x) {
+                                    const local = element.closest('.MaisMenosProdu');
+                                    var texto = local.querySelector('p');
+                                    var StringToNum = parseInt(texto.innerHTML);
+                                    var Resultado = StringToNum + x;
+                                    if(Resultado<1){
+                                        window.alert('Rapaz, ta certo isso?');
+                                    }else{
+                                        texto.innerHTML = Resultado;
+                                    }
+                                }
+                            </script>                
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+            <div class="ResumPedido">
+                <div class="ResumValorCash"></div>
+                <div class="PagamentoSeguro"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
