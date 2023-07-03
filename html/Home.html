@@ -191,30 +191,30 @@
 
 
     <div id="id02" class="TudoPopUp">
-        <form class="PopUp fade2" id="gb72mwd2">
+        <form class="PopUp fade2" id="gb72mwd2" method="post" action="/cadastro">
             <div class="PopUpSuperior">
                 <p>Cadastrar-se</p>
-                <button onclick="document.getElementById('id02').style.display='none'">
+                <button onclick="document.getElementById('id02').style.display='none', event.preventDefault()">
                     <img src="/img/assets/Xfechar.svg" height="30px">
                 </button>
             </div>
             <div class="PopUpTorso" style="flex-direction: row; justify-content: space-between;">
                 <div class="CadastroRow">
                     <label><b>Nome:</b></label>
-                    <input type="text" placeholder="Coloque seu Nome:">
+                    <input type="text" placeholder="Coloque seu Nome:"name="nomecad">
                     <br>
                     <label><b>E-mail:</b></label>
-                    <input type="email" placeholder="Coloque seu E-mail" style="width: 226px;">
+                    <input type="email" placeholder="Coloque seu E-mail" style="width: 226px;" name="emailcad">
                     <br>
                     <label><b>Senha:</b></label>
-                    <input type="password" placeholder="Coloque sua senha">
+                    <input type="password" placeholder="Coloque sua senha" name="senhacad">
                     <br>
                     <label><b>Confirmar Senha:</b></label>
-                    <input type="password" placeholder="Confirme sua Senha">
+                    <input type="password" placeholder="Confirme sua Senha" name="reqsenhacad">
                 </div>
                 <div class="CadastroRow">
                     <label><b>Sobrenome:</b></label>
-                    <input type="text" placeholder="Coloque seu Sobrenome">
+                    <input type="text" placeholder="Coloque seu Sobrenome" name="sobrenomecad">
                     <br>
                     <label><b>Data de Nascimento:</b></label>
                     <div class="IdadeCadastro">
@@ -229,7 +229,7 @@
                                         BotaoDia.id = "DIAbtn" + i;
                                         BotaoDia.innerHTML = "<p>" + i + "</p>";
                                         BotaoDia.onclick = function() {
-                                            TrocarDIA(this);
+                                            TrocarDIA(this), event.preventDefault();
                                         }
                                         document.getElementById("BotoesDias1").appendChild(BotaoDia);
                                     } 
@@ -238,7 +238,7 @@
                                         BotaoDia.id = "DIAbtn" + i;
                                         BotaoDia.innerHTML = "<p>" + i + "</p>";
                                         BotaoDia.onclick = function() {
-                                            TrocarDIA(this);
+                                            TrocarDIA(this), event.preventDefault();
                                         }
                                         document.getElementById("BotoesDias2").appendChild(BotaoDia);
                                     }                             
@@ -253,18 +253,18 @@
                             <div class="hiddenOverlayPadrao"></div>
                             <div class="OverlayPadrao OverlayMes fade2"">
                                 <div>
-                                    <button id="MESbtn1" onclick="TrocarMES(this)"><p>Janeiro</p></button>
-                                    <button id="MESbtn2" onclick="TrocarMES(this)"><p>Fevereiro</p></button>
-                                    <button id="MESbtn3" onclick="TrocarMES(this)"><p>Março</p></button>
-                                    <button id="MESbtn4" onclick="TrocarMES(this)"><p>Abril</p></button>
-                                    <button id="MESbtn5" onclick="TrocarMES(this)"><p>Maio</p></button>
-                                    <button id="MESbtn6" onclick="TrocarMES(this)"><p>Junho</p></button>
-                                    <button id="MESbtn7" onclick="TrocarMES(this)"><p>Julho</p></button>
-                                    <button id="MESbtn8" onclick="TrocarMES(this)"><p>Agosto</p></button>
-                                    <button id="MESbtn9" onclick="TrocarMES(this)"><p>Setembro</p></button>
-                                    <button id="MESbtn10" onclick="TrocarMES(this)"><p>Outubro</p></button>
-                                    <button id="MESbtn11" onclick="TrocarMES(this)"><p>Novembro</p></button>
-                                    <button id="MESbtn12" onclick="TrocarMES(this)"><p>Dezembro</p></button>
+                                    <button id="MESbtn1" onclick="TrocarMES(this), event.preventDefault()"><p>Janeiro</p></button>
+                                    <button id="MESbtn2" onclick="TrocarMES(this), event.preventDefault()"><p>Fevereiro</p></button>
+                                    <button id="MESbtn3" onclick="TrocarMES(this), event.preventDefault()"><p>Março</p></button>
+                                    <button id="MESbtn4" onclick="TrocarMES(this), event.preventDefault()"><p>Abril</p></button>
+                                    <button id="MESbtn5" onclick="TrocarMES(this), event.preventDefault()"><p>Maio</p></button>
+                                    <button id="MESbtn6" onclick="TrocarMES(this), event.preventDefault()"><p>Junho</p></button>
+                                    <button id="MESbtn7" onclick="TrocarMES(this), event.preventDefault()"><p>Julho</p></button>
+                                    <button id="MESbtn8" onclick="TrocarMES(this), event.preventDefault()"><p>Agosto</p></button>
+                                    <button id="MESbtn9" onclick="TrocarMES(this), event.preventDefault()"><p>Setembro</p></button>
+                                    <button id="MESbtn10" onclick="TrocarMES(this), event.preventDefault()"><p>Outubro</p></button>
+                                    <button id="MESbtn11" onclick="TrocarMES(this), event.preventDefault()"><p>Novembro</p></button>
+                                    <button id="MESbtn12" onclick="TrocarMES(this), event.preventDefault()"><p>Dezembro</p></button>
                                 </div>
                             </div>
                             <button style="border-radius: 0;">
@@ -282,7 +282,7 @@
                                         BotaoAno.id = "ANObtn" + (2023 - i + 1);
                                         BotaoAno.innerHTML = "<p>" + i + "</p>";
                                         BotaoAno.onclick = function() {
-                                            TrocarAno(this);
+                                            TrocarAno(this), event.preventDefault();
                                         }
                                         document.getElementById("BotoesAnos").appendChild(BotaoAno);
                                     }                             
@@ -301,24 +301,24 @@
                             <div class="hiddenOverlayPadrao"></div>
                             <div class="OverlayPadrao OverlayDDI fade2">
                                 <div>
-                                    <button id="DDIbtn1" onclick="TrocarDDI(this)"><p>+55</p></button>
-                                    <button id="DDIbtn2" onclick="TrocarDDI(this)"><p>+45</p></button>
-                                    <button id="DDIbtn3" onclick="TrocarDDI(this)"><p>+35</p></button>
-                                    <button id="DDIbtn4" onclick="TrocarDDI(this)"><p>+25</p></button>
-                                    <button id="DDIbtn5" onclick="TrocarDDI(this)"><p>+15</p></button>
-                                    <button id="DDIbtn6" onclick="TrocarDDI(this)"><p>+115</p></button>
-                                    <button id="DDIbtn7" onclick="TrocarDDI(this)"><p>+65</p></button>
-                                    <button id="DDIbtn8" onclick="TrocarDDI(this)"><p>+75</p></button>
+                                    <button id="DDIbtn1" onclick="TrocarDDI(this)"><p>13</p></button>
+                                    <button id="DDIbtn2" onclick="TrocarDDI(this)"><p>17</p></button>
+                                    <button id="DDIbtn3" onclick="TrocarDDI(this)"><p>45 </p></button>
+                                    <button id="DDIbtn4" onclick="TrocarDDI(this)"><p>47</p></button>
+                                    <button id="DDIbtn5" onclick="TrocarDDI(this)"><p>48</p></button>
+                                    <button id="DDIbtn6" onclick="TrocarDDI(this)"><p>49</p></button>
+                                    <button id="DDIbtn7" onclick="TrocarDDI(this)"><p>22</p></button>
+                                    <button id="DDIbtn8" onclick="TrocarDDI(this)"><p>27</p></button>
                                 </div>
                             </div>
                             <button>
-                                <span id="DDIPrincipal"><p>+55</p></span>
+                                <span id="DDIPrincipal"><p>13</p></span>
                                 <img src="/img/assets/setacima.svg" height="10px" id="f12hg">
                             </button>
                         </span>
                         <span id="g435gr2"></span>
                         <span>
-                            <input type="text" placeholder="Digite seu número"></input>
+                            <input type="text" placeholder="Digite seu número" name="telefonecad"></input>
                         </span>
                     </div>
                     <br>
@@ -331,7 +331,7 @@
             </div>
             <div class="PopUpInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id02').style.display='none'">
+                    <button type="submit">
                         <p style="margin: 0;">Continuar</p>
                         <img src="/img/assets/enviar.svg" height="40px">
                     </button>
@@ -341,7 +341,7 @@
     </div>
     
     <div id="id01" class="TudoPopUp">
-        <form class="PopUp fade2">
+        <form class="PopUp fade2" action="/login" method="post">
             <div class="PopUpSuperior">
                 <p>LOGIN</p>
                 <button onclick="document.getElementById('id01').style.display='none'">
@@ -350,10 +350,10 @@
             </div>
             <div class="PopUpTorso">
                 <label><b>E-mail:</b></label>
-                <input type="text" placeholder="Coloque seu E-mail" name="username" required">
+                <input type="text" placeholder="Coloque seu E-mail" name="emaillog" required">
                 <br>
                 <label><b>Senha:</b></label>
-                <input type="password" placeholder="Coloque sua senha" name="password" required>
+                <input type="password" placeholder="Coloque sua senha" name="senhalog" required>
                 <br>
                 <div id="efg6123a" style="display: flex; justify-content: space-between;">
                     <span>
@@ -371,7 +371,7 @@
             </div>
             <div class="PopUpInferior">
                 <div>
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'">
+                    <button type="submit">
                         <p style="margin: 0;">Continuar</p>
                         <img src="/img/assets/enviar.svg" height="40px">
                     </button>
