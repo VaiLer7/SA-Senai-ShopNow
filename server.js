@@ -23,7 +23,7 @@ app.use('/html/User', express.static('User'));
 const connection = mysql.createConnection({
   host: '127.0.0.1',
   user: 'root',
-  password: '',
+  password: 'root',
   database: 'sa_shopnow',
 });
 
